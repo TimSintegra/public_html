@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-17 09:20:46
+/* Smarty version 5.4.3, created on 2025-10-17 10:09:03
   from 'file:/opt/lampp/htdocs/public_html//templates/default/menu.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_68f1ee4ed41081_73426041',
+  'unifunc' => 'content_68f1f99fd0c8b9_25688041',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aba9f93eb2d99e8e3dd5009d72d41e5781bbf6e0' => 
     array (
       0 => '/opt/lampp/htdocs/public_html//templates/default/menu.tpl',
-      1 => 1760685645,
+      1 => 1760688446,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_68f1ee4ed41081_73426041 (\Smarty\Template $_smarty_tpl) {
+function content_68f1f99fd0c8b9_25688041 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><div id="menu-wrapper">
     <ul class="nav">
@@ -62,12 +62,6 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
         <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
-
-       <!--  <li class="more">
-            <span>Ещё</span>
-            <ul id="overflow">
-            </ul>
-        </li> -->
     </ul>
 </div><?php }
 }

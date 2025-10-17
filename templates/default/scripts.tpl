@@ -1,5 +1,4 @@
-<!-- 
- <script src="{$TPL_URL}/js/eff.js"></script>
+<script src="{$TPL_URL}/js/eff.js"></script>
 <script src="{$TPL_URL}/js/jquery-3.1.1.js"></script>
 <script src="{$TPL_URL}/js/jquery.spincrement.js"></script>
 <script src="{$TPL_URL}/js/jquery.sticky.js"></script>

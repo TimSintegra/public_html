@@ -1,0 +1,190 @@
+/* Основной футер (теперь с белым фоном) */
+.footer {
+    background-color: #ffffff; /* Белый фон, как просил */
+    color: #333; /* Тёмный текст для читаемости */
+    padding: 40px 0 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #e0e0e0; /* Лёгкая граница сверху для отделения от контента */
+}
+
+/* Flex-контейнеры */
+.f.sb.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+/* Логотип (цветной, но если нужно монохромный — добавь filter: grayscale(100%) invert(1); для белого) */
+.logo img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Навигация в футере */
+.navfoot {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navfoot li a {
+    color: #666; /* Серый для ссылок на белом фоне */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navfoot li a:hover,
+.navfoot li a.active {
+    color: #0066cc; /* Синий акцент при hover/active */
+    font-weight: bold;
+}
+
+/* Адрес */
+.fadd {
+    text-align: right;
+}
+
+.fadd span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Тёмный для заголовка */
+}
+
+.fadd i {
+    font-style: normal;
+    color: #666; /* Серый для текста */
+}
+
+/* Телефон */
+.ftel {
+    text-align: right;
+}
+
+.ftel span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.ftel i {
+    font-style: normal;
+    color: #666;
+}
+
+/* Нижняя часть */
+.footer .f.sb.content-wrapper:last-child {
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0; /* Светлая граница на белом */
+    padding-top: 20px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.footer .f.sb.content-wrapper:last-child a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.footer .f.sb.content-wrapper:last-child a:hover {
+    color: #004080;
+}
+
+/* Модальное окно (оставил без изменений, но адаптировал цвета под светлую тему) */
+#bell2 {
+    display: none;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#bell2 h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#bell2 p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#bell2 form .frm-blk {
+    margin-bottom: 15px;
+}
+
+#bell2 input[type="text"],
+#bell2 textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#bell2 input[type="text"]:focus,
+#bell2 textarea:focus {
+    border-color: #0066cc;
+}
+
+#bell2 .w12.center {
+    text-align: center;
+}
+
+#bell2 input[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#bell2 input[type="submit"]:hover {
+    background-color: #004080;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .f.sb.content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .navfoot {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fadd, .ftel {
+        text-align: center;
+    }
+
+    #bell2 {
+        padding: 20px;
+        max-width: 90%;
+    }
+}

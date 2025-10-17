@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-17 08:55:34
+/* Smarty version 5.4.3, created on 2025-10-17 09:52:28
   from 'file:/opt/lampp/htdocs/public_html//templates/default/scripts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_68f1e86622b266_71118830',
+  'unifunc' => 'content_68f1f5bc8a3af3_03654213',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5fdd072640d99ef601d555123080b21fb654d368' => 
     array (
       0 => '/opt/lampp/htdocs/public_html//templates/default/scripts.tpl',
-      1 => 1760684119,
+      1 => 1760687544,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_68f1e86622b266_71118830 (\Smarty\Template $_smarty_tpl) {
+function content_68f1f5bc8a3af3_03654213 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
-?><!-- 
- <?php echo '<script'; ?>
+echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /js/eff.js"><?php echo '</script'; ?>
 >

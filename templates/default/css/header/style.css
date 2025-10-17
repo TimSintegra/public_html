@@ -1,0 +1,218 @@
+/* Основной хедер */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер внутри хедера (ширина как в footer) */
+.header .f.sb.ac.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Одинаковая ширина с footer */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Логотип (ещё больше) */
+.logo img {
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Телефонная ссылка */
+.tela {
+    display: flex;
+    align-items: center;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tela i {
+    margin-right: 10px;
+    font-size: 1.3em;
+    color: #0066cc;
+}
+
+.tela:hover {
+    color: #004080;
+}
+
+/* Меню (.nav из menu.tpl) */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+
+.nav li a:hover,
+.nav li a.active {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* Подменю */
+.nav li div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 999;
+}
+
+.nav li:hover div {
+    display: block;
+}
+
+.nav li div ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.nav li div ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav li div ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Мобильный хедер */
+.headerm {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.headerm span,
+.headerm span::before,
+.headerm span::after {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.headerm span {
+    top: 50%;
+}
+
+.headerm span::before {
+    content: '';
+    top: -8px;
+}
+
+.headerm span::after {
+    content: '';
+    top: 8px;
+}
+
+.headerm.active span {
+    background-color: transparent;
+}
+
+.headerm.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.headerm.active span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header .f.sb.ac.content-wrapper {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .headerm {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav li {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .nav li div {
+        position: static;
+        display: block;
+        border: none;
+        box-shadow: none;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 70px; /* Чуть меньше на мобильных для баланса */
+    }
+
+    .tela {
+        font-size: 1em;
+    }
+}

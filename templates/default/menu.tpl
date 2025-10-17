@@ -17,11 +17,5 @@
             {/if}
             </li>
         {/foreach}
-
-       <!--  <li class="more">
-            <span>Ещё</span>
-            <ul id="overflow">
-            </ul>
-        </li> -->
     </ul>
 </div>
