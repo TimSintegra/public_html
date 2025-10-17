@@ -1,0 +1,19 @@
+<FilesMatch "\.(tpl)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+<Files "ext.php">
+Order Allow,Deny
+Deny from all
+</Files>
+RewriteEngine On
+RewriteBase /admin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?sec=$1&act=$2&id=$3&subid=$4&page=$5&val6=$6 [QSA,L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/(.*)/$ index.php?sec=$1&act=$2&id=$3&subid=$4&page=$5 [QSA,L]
+RewriteRule ^(.*)/(.*)/(.*)/(.*)/$ index.php?sec=$1&act=$2&id=$3&subid=$4 [QSA,L]
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?sec=$1&act=$2&id=$3 [QSA,L]
+RewriteRule ^(.*)/(.*)/$ index.php?sec=$1&act=$2 [QSA,L]
+RewriteRule ^(.*)/$ index.php?sec=$1 [QSA,L]
+ErrorDocument 404 /admin/index.php?sec=404

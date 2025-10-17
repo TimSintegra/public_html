@@ -1,0 +1,173 @@
+.jqueryslidemenu{
+	clear:both;
+	float:left;
+	background-image:url(../images/menubg.jpg);
+	background-repeat:repeat-x;
+background-color:#209cef;
+width:100%;
+margin:0 auto;
+
+}
+*:first-child+html .jqueryslidemenu{
+	clear:both;
+	float:left;
+	background-image:url(../images/menubg.jpg);
+	background-repeat:repeat-x;
+background-color:#209cef;
+width:100%;
+margin:0 auto;
+height:54px;
+
+}
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+margin-left:3px;
+}
+*:first-child+html .jqueryslidemenu ul{
+	position:absolute;
+margin: 0;
+padding: 0;
+list-style-type: none;
+margin-left:0px;
+z-index:10001;
+}
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+	background-position:10px center;
+	background-repeat:no-repeat;
+	font-size:16px;
+	text-shadow:0 1px 0 #0764d7;
+display: block;
+color: white;
+padding: 19px 10px 19px 50px;
+border-right: 1px solid #43b3fe;
+border-left: 1px solid #0285dd;
+color: #FFF;
+text-decoration: none;
+
+z-index:10000;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: white;
+}
+
+.jqueryslidemenu ul li a:hover{
+	background-color:#0285dd;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+margin-top:-1px;
+margin-left:0px;
+display: block;
+visibility: hidden;
+z-index:10000;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+	font-size:16px;
+width: 250px; /*width of sub menus*/
+padding: 19px 20px 19px 58px;
+margin: 0;
+border-top-width: 0;
+border-bottom: 1px solid #0077c7;
+border-top: 1px solid #0b96f2;
+background-color:#0285dd;
+}
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+background-color:#209cef;
+
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 21px;
+right: 17px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 20px;
+right: 10px;
+}
+.jqueryslidemenu ul li .price_ico {
+	background-image:url(../images/prices.png);
+	}
+.jqueryslidemenu ul li .clinic_ico {
+	background-image:url(../images/clinics.png);}
+.jqueryslidemenu ul li .experts_ico {
+	background-image:url(../images/experts.png);}
+.jqueryslidemenu ul li .shedule_ico {
+	background-image:url(../images/shedules.png);}
+.jqueryslidemenu ul li .shablon_ico {
+    background-image:url(../images/shablonAdd.png);}
+.jqueryslidemenu ul li .records_ico {
+	background-image:url(../images/records.png);}
+.jqueryslidemenu ul li .stats_ico {
+	background-image:url(../images/stats.png);}
+/*New ones*/
+.jqueryslidemenu ul li .system_ico {
+    background-image:url(../images/system.png);}
+.jqueryslidemenu ul li .settings_ico {
+    background-image:url(../images/settings.png);}
+.jqueryslidemenu ul li .cities_ico {
+    background-image:url(../images/cities.png);}
+.jqueryslidemenu ul li .profiles_ico {
+    background-image:url(../images/profiles.png);}
+.jqueryslidemenu ul li .specs_ico {
+    background-image:url(../images/specs.png);}
+.jqueryslidemenu ul li .services_ico {
+    background-image:url(../images/services.png);}
+.jqueryslidemenu ul li .content_ico {
+    background-image:url(../images/content.png);}
+.jqueryslidemenu ul li .about_ico {
+    background-image:url(../images/about.png);}
+.jqueryslidemenu ul li .news_ico {
+    background-image:url(../images/news.png);}
+.jqueryslidemenu ul li .banners_ico {
+    background-image:url(../images/banners.png);}
+.jqueryslidemenu ul li .partner_ico {
+    background-image:url(../images/partners.png);}
+.jqueryslidemenu ul li .vacancy_ico {
+    background-image:url(../images/vacancy.png);}
+.jqueryslidemenu ul li .reviews_ico {
+    background-image:url(../images/reviews.png);}
+.jqueryslidemenu ul li .users_ico {
+    background-image:url(../images/users.png);}
+.jqueryslidemenu ul li .admins_ico {
+    background-image:url(../images/admins.png);}
+.jqueryslidemenu ul li .sections_ico {
+    background-image:url(../images/sections.png);}
+.jqueryslidemenu ul li .clients_ico {
+    background-image:url(../images/clients.png);}

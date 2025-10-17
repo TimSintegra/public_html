@@ -1,0 +1,18 @@
+<FilesMatch "\.(tpl)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+<Files "ext.php">
+Order Allow,Deny
+Deny from all
+</Files>
+RewriteEngine On
+RewriteBase /public_html/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([-a-zA-Z0-9_]+)/([-a-zA-Z0-9_]+)/(.*)/(.*)/(.*).html$ index.php?sec=$1&act=$2&val1=$3&val2=$4&val3=$5 [QSA,L]
+RewriteRule ^([-a-zA-Z0-9_]+)/([-a-zA-Z0-9_]+)/(.*)/(.*).html$ index.php?sec=$1&act=$2&val1=$3&val2=$4 [QSA,L]
+RewriteRule ^([-a-zA-Z0-9_]+)/([-a-zA-Z0-9_]+)/(.*).html$ index.php?sec=$1&act=$2&val1=$3 [QSA,L]
+RewriteRule ^([-a-zA-Z0-9_]+)/([-a-zA-Z0-9_]+).html$ index.php?sec=$1&act=$2 [QSA,L]
+RewriteRule ^([-a-zA-Z0-9_]+).html$ index.php?sec=$1 [QSA,L]
+ErrorDocument 404 /index.php?sec=404

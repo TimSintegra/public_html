@@ -1,0 +1,155 @@
+<?php
+/**
+ * Admin add module
+ *
+ * @author Almaz Ibragimov <kraftnk@gmail.com>
+ * @date 03.04.13
+ * @time 0:29
+ * @version 1.1
+ *
+ */
+if (!$_user->checkLogin()) {
+    exit("You don't have permission to access");
+}
+$_val=$db->getRow("select * from services where id='" . $id . "'");
+$_val['title'] = htmlspecialchars($_val['title']);
+$_val['main_content'] = $_val['main_text'];
+$seo = $db->getRow("SELECT *FROM seo WHERE sec='services' AND url='" . $_val['url'] . "'");
+if ($seo) {
+    $_val['stitle'] = $seo['title'];
+    $_val['keywords'] = $seo['keywords'];
+    $_val['description'] = $seo['description'];
+    $_val['seoid'] = $seo['id'];
+} else {
+    $db->exec("INSERT INTO seo SET sec='services', url='" . $_val['url'] . "'");
+    $lastSeoId = $db->id;
+    $_val['stitle'] = '';
+    $_val['keywords'] = '';
+    $_val['description'] = '';
+    $_val['seoid'] = $lastSeoId;
+}
+
+$errorText = '';
+$successText = '';
+$dbtable = 'servicescats';
+$activeCats = 1;
+
+$formDetails = array('formTitle' => 'Изменить данные услуги',
+    'submitName' => 'edit_page',
+    'submitValue' => 'Изменить');
+
+if (isset($_POST[$formDetails['submitName']]) && $_POST[$formDetails['submitName']]== $formDetails['submitValue'])
+{
+    $_val = $_POST;
+    $check_data=array(
+        'cid',
+        'title',
+    );
+    if ($_adminka->ControlForm($_POST, $check_data)===true) {
+        $errorText ='Обязательные поля для заполнения: Категория, Заголовок';
+    } else {
+        $title = $exe->quote_smart($_POST['title']);
+        $main_text = $exe->quote_smart($_POST['main_content']);
+        if (isset($_POST['main']) && $_POST['main'] == '1') {
+            $main = 1;
+        } else {
+            $main = 0;
+        }
+        $url = $_adminka->generateUrl('services', mb_strtolower($title, 'UTF-8'), '', 0, $_POST['url']);
+        $cid = intval($_POST['cid']);
+        $data = array(
+            'cid' => $cid,
+            'url' => $url,
+            'title' => $title,
+            'main_text' => $main_text,
+            'main' => $main
+        );
+        if ($_adminka->UpdateBase("services", $data, "id=" . $id)) {
+
+            $stitle = $exe->quote_smart($_POST['stitle']);
+            $skeywords = $exe->quote_smart($_POST['keywords']);
+            $sdesc = $exe->quote_smart($_POST['description']);
+            $seoid = intval($_POST['seoid']);
+
+            $seoData = array(
+                'url' => $url,
+                'title' => $stitle,
+                'keywords' => $skeywords,
+                'description' => $sdesc
+            );
+            $_adminka->UpdateBase("seo", $seoData, "id=" . $seoid);
+            //изменения
+            if (!empty($_FILES['service']['tmp_name'])) {
+    	    // Удаляем старое изображение если есть
+            	if (!empty($_val['image'])) {
+        		$oldImagePath = _SERVER_ROOT . "/content/img/pages/" . $_val['image'];
+        		if (file_exists($oldImagePath)) {
+            			unlink($oldImagePath);
+        		}
+    		}
+
+    		// Генерируем новое имя файла
+    		$fileIn = $exe->translit($_FILES['service']['name']);
+    		$_img = $exe->generatePassword(6);
+    		$filename = $id . "_" . $_img . "_" . $fileIn;
+    		$fullPath = _SERVER_ROOT . "/content/img/pages/" . $filename;
+
+    		// Сохраняем изображение
+		require_once(_SERVER_ROOR.'/libs/SimpleImage.php');
+		$image = new SimpleImage();
+    		if ($_adminka->SaveResizeImage($image, $_FILES['service']['tmp_name'], $fullPath, 'best_fit', 400, 300)) {
+        		$data = array('image' => $filename);
+        		if ($_adminka->UpdateBase("services", $data, "id=" . $id)) {
+            			$successText = 'Информация успешно исправлена';
+            			header("Location: " . _ADMIN_URL . ($subid ? "/services/show/$subid/" : "/services/"));
+            			exit;
+        		} 
+			else {
+            			$errorText = 'Ошибка базы данных при обновлении изображения!';
+        		}
+    		} 
+		else {
+        		$errorText = 'Не удалось сохранить изображение. Проверьте права на папку /content/img/pages/';
+    		}
+            //конец изминений с нижнекй }
+            } else {
+                $successText ='Информация успешно исправлена';
+                if ($subid) {
+                    Header ("Location: " . _ADMIN_URL . "/services/show/" . $subid . "/");
+                } else {
+                    Header ("Location: " . _ADMIN_URL . "/services/");
+                }
+            }
+        } else {
+            $errorText ='Ошибка базы данных!!!';
+        }
+    }
+}
+
+$categorySelect = $_forms->_selectForm (
+    'cid',
+    'servicescats',
+    'id',
+    'title',
+    1,
+    'Выберите категорию',
+    $_val['cid'],
+    'active="1"',
+    'msort'
+);
+
+$hiddenInputs = '<input type="hidden" name="sec" value="' . $sec . '">';
+$hiddenInputs .= '<input type="hidden" name="id" value="' . $id . '">'
+    . '<input type="hidden" name="url" value="' . $_val['url'] . '">'
+    . '<input type="hidden" name="seoid" value="' . $_val['seoid'] . '">';
+if ($subid) {
+    $hiddenInputs .= '<input type="hidden" name="subid" value="' . $subid . '">';
+}
+
+$smarty->assign('_val', $_val);
+
+$smarty->assign('errorText', $errorText);
+$smarty->assign('successText', $successText);
+$smarty->assign('hiddenInputs', $hiddenInputs);
+$smarty->assign('parentCategory', $categorySelect);
+$smarty->assign('formDetails', $formDetails);
