@@ -18,20 +18,33 @@
     color: #555;
 }
 
-/* Компания */
-.company-about {
-    background-color: #ffffff;
+/* Общая секция компании */
+.company-section {
     padding: 40px 0;
+    background-color: #f9f9f9; /* Пример фона, как у company-about */
 }
 
-.company-text, .company-info {
+/* Контейнер */
+.company-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Текст о компании */
+.company-text,
+.company-info {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Услуги и города */
-.services-list ul, .cities-list ul {
+/* Список услуг */
+.services-list {
+    margin-top: 20px; /* Отступ сверху для разделения от текста */
+}
+
+.services-items {
     list-style-type: disc;
     padding-left: 20px;
     font-size: 1em;
@@ -67,10 +80,33 @@
     flex: 1;
 }
 
+/* Общая секция городов и статистики */
+.city-stats-section {
+    padding: 40px 0;
+    background-color: #e9ecef; /* Пример фона, можно изменить */
+}
+
+/* Контейнер */
+.city-stats-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Список городов */
+.cities-list {
+    margin-bottom: 30px; /* Отступ перед статистикой */
+}
+
+.cities-items {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1em;
+}
+
 /* Статистика */
 .stats-sections {
-    padding: 40px 0;
-    background-color: #ffffff;
+    margin-top: 20px; /* Отступ сверху для разделения */
 }
 
 .stats-section {

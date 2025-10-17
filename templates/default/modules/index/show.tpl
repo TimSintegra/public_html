@@ -1,4 +1,4 @@
-<section class="company-about">
+<section class="company-section">
     <div class="container">
         <article class="company-text">
             <p>{$text_about_company}</p>
@@ -6,16 +6,13 @@
         <article class="company-info">
             <p>{$text_about_company_info}</p>
         </article>
-    </div>
-</section>
-
-<section class="services-list">
-    <div class="container">
-        <ul class="services-items">
-            {foreach $services_list as $service}
-                <li>{$service}</li>
-            {/foreach}
-        </ul>
+        <div class="services-list">
+            <ul class="services-items">
+                {foreach $services_list as $service}
+                    <li>{$service}</li>
+                {/foreach}
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -34,34 +31,33 @@
     </div>
 </section>
 
-<section class="cities-list">
+<section class="city-stats-section">
     <div class="container">
-        <ul class="cities-items">
-            {foreach $cities_list as $cities}
-                <li>{$cities}</li>
-            {/foreach}
-        </ul>
-    </div>
-</section>
-
-<section class="stats-sections">
-    <div class="container">
-        {foreach from=$stats_data key=section_name item=section}
-            <div class="stats-section">
-                <h3 class="stats-title">{$section.title}</h3>
-                <div class="stats-grid">
-                    {foreach from=$section.items item=item}
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <img src="{$TPL_URL}/images/{$item.icon}" alt="{$item.text}">
+        <div class="cities-list">
+            <ul class="cities-items">
+                {foreach $cities_list as $cities}
+                    <li>{$cities}</li>
+                {/foreach}
+            </ul>
+        </div>
+        <div class="stats-sections">
+            {foreach from=$stats_data key=section_name item=section}
+                <div class="stats-section">
+                    <h3 class="stats-title">{$section.title}</h3>
+                    <div class="stats-grid">
+                        {foreach from=$section.items item=item}
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <img src="{$TPL_URL}/images/{$item.icon}" alt="{$item.text}">
+                                </div>
+                                <div class="stat-value">{$item.value}</div>
+                                <div class="stat-text">{$item.text}</div>
                             </div>
-                            <div class="stat-value">{$item.value}</div>
-                            <div class="stat-text">{$item.text}</div>
-                        </div>
-                    {/foreach}
+                        {/foreach}
+                    </div>
                 </div>
-            </div>
-        {/foreach}
+            {/foreach}
+        </div>
     </div>
 </section>
 
@@ -75,7 +71,7 @@
                         <div class="partner-info-left">
                             <header class="partner-header">
                                 <div class="partner-icon">
-                                    <img src="{$TPL_URL}/images/partners/{$partner.icon}" alt="{$partner.title}">
+                                    <img src="{$TPL_URL}/images/{$partner.icon}" alt="{$partner.title}">
                                 </div>
                                 <h3 class="partner-title">{$partner.title}</h3>
                             </header>
@@ -96,7 +92,7 @@
                         {if $partner.image}
                             <div class="partner-info-right">
                                 <figure class="partner-image">
-                                    <img src="{$TPL_URL}/images/partners/{$partner.image}" alt="{$partner.title}">
+                                    <img src="{$TPL_URL}/images/{$partner.image}" alt="{$partner.title}">
                                     {if $partner.information_image}
                                         <figcaption class="partner-image-caption">{$partner.information_image}</figcaption>
                                     {/if}
@@ -157,7 +153,7 @@
                 <img src="{$TPL_URL}/images/contacts-image.png" alt="Изображение контактов">
                 <h2>Офис в Москве:</h2>
                 <p>Российская Федерация</p>
-                <p>г. Москва, ул. Матросская Тишина, 23с1,</p> <!-- Поправил опечатку в "Мотросская" -->
+                <p>г. Москва, ул. Мотросская Тишина, 23с1,</p>
                 <p>помещение XXVI, ком.1</p>
                 <p>Email: <a href="mailto:office@s-nk.su">office@s-nk.su</a></p>
                 <h2>Офис и производственная база в Нижнекамске:</h2>

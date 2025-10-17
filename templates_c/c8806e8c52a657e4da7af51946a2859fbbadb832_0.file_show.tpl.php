@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-17 10:51:13
+/* Smarty version 5.4.3, created on 2025-10-17 16:03:46
   from 'file:/opt/lampp/htdocs/public_html//templates/default/modules/index/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_68f20381db1655_46390705',
+  'unifunc' => 'content_68f24cc2177552_65145981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8806e8c52a657e4da7af51946a2859fbbadb832' => 
     array (
       0 => '/opt/lampp/htdocs/public_html//templates/default/modules/index/show.tpl',
-      1 => 1760691047,
+      1 => 1760709824,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_68f20381db1655_46390705 (\Smarty\Template $_smarty_tpl) {
+function content_68f24cc2177552_65145981 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/index';
-?><section class="company-about">
+?><section class="company-section">
     <div class="container">
         <article class="company-text">
             <p><?php echo $_smarty_tpl->getValue('text_about_company');?>
@@ -32,24 +32,21 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/
             <p><?php echo $_smarty_tpl->getValue('text_about_company_info');?>
 </p>
         </article>
-    </div>
-</section>
-
-<section class="services-list">
-    <div class="container">
-        <ul class="services-items">
-            <?php
+        <div class="services-list">
+            <ul class="services-items">
+                <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('services_list'), 'service');
 $foreach0DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('service')->value) {
 $foreach0DoElse = false;
 ?>
-                <li><?php echo $_smarty_tpl->getValue('service');?>
+                    <li><?php echo $_smarty_tpl->getValue('service');?>
 </li>
-            <?php
+                <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
-        </ul>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -79,62 +76,61 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
     </div>
 </section>
 
-<section class="cities-list">
+<section class="city-stats-section">
     <div class="container">
-        <ul class="cities-items">
-            <?php
+        <div class="cities-list">
+            <ul class="cities-items">
+                <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('cities_list'), 'cities');
 $foreach2DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('cities')->value) {
 $foreach2DoElse = false;
 ?>
-                <li><?php echo $_smarty_tpl->getValue('cities');?>
+                    <li><?php echo $_smarty_tpl->getValue('cities');?>
 </li>
-            <?php
+                <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
-        </ul>
-    </div>
-</section>
-
-<section class="stats-sections">
-    <div class="container">
-        <?php
+            </ul>
+        </div>
+        <div class="stats-sections">
+            <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('stats_data'), 'section', false, 'section_name');
 $foreach3DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('section_name')->value => $_smarty_tpl->getVariable('section')->value) {
 $foreach3DoElse = false;
 ?>
-            <div class="stats-section">
-                <h3 class="stats-title"><?php echo $_smarty_tpl->getValue('section')['title'];?>
+                <div class="stats-section">
+                    <h3 class="stats-title"><?php echo $_smarty_tpl->getValue('section')['title'];?>
 </h3>
-                <div class="stats-grid">
-                    <?php
+                    <div class="stats-grid">
+                        <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('section')['items'], 'item');
 $foreach4DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('item')->value) {
 $foreach4DoElse = false;
 ?>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /images/<?php echo $_smarty_tpl->getValue('item')['icon'];?>
 " alt="<?php echo $_smarty_tpl->getValue('item')['text'];?>
 ">
+                                </div>
+                                <div class="stat-value"><?php echo $_smarty_tpl->getValue('item')['value'];?>
+</div>
+                                <div class="stat-text"><?php echo $_smarty_tpl->getValue('item')['text'];?>
+</div>
                             </div>
-                            <div class="stat-value"><?php echo $_smarty_tpl->getValue('item')['value'];?>
-</div>
-                            <div class="stat-text"><?php echo $_smarty_tpl->getValue('item')['text'];?>
-</div>
-                        </div>
-                    <?php
+                        <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
+                    </div>
                 </div>
-            </div>
-        <?php
+            <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
+        </div>
     </div>
 </section>
 
@@ -154,7 +150,7 @@ $foreach5DoElse = false;
                             <header class="partner-header">
                                 <div class="partner-icon">
                                     <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/partners/<?php echo $_smarty_tpl->getValue('partner')['icon'];?>
+/images/<?php echo $_smarty_tpl->getValue('partner')['icon'];?>
 " alt="<?php echo $_smarty_tpl->getValue('partner')['title'];?>
 ">
                                 </div>
@@ -188,7 +184,7 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
                             <div class="partner-info-right">
                                 <figure class="partner-image">
                                     <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/partners/<?php echo $_smarty_tpl->getValue('partner')['image'];?>
+/images/<?php echo $_smarty_tpl->getValue('partner')['image'];?>
 " alt="<?php echo $_smarty_tpl->getValue('partner')['title'];?>
 ">
                                     <?php if ($_smarty_tpl->getValue('partner')['information_image']) {?>
@@ -283,7 +279,7 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
 /images/contacts-image.png" alt="Изображение контактов">
                 <h2>Офис в Москве:</h2>
                 <p>Российская Федерация</p>
-                <p>г. Москва, ул. Матросская Тишина, 23с1,</p> <!-- Поправил опечатку в "Мотросская" -->
+                <p>г. Москва, ул. Мотросская Тишина, 23с1,</p>
                 <p>помещение XXVI, ком.1</p>
                 <p>Email: <a href="mailto:office@s-nk.su">office@s-nk.su</a></p>
                 <h2>Офис и производственная база в Нижнекамске:</h2>
