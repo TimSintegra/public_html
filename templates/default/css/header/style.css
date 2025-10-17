@@ -36,6 +36,26 @@
 }
 
 /* Телефонная ссылка */
+.tela i {
+	color: #e23c40;
+	font-size: 15px;
+	margin-right: 10px;
+}
+.us li a i.fa-phone-alt {
+	font-size: 17px;
+}
+.us {
+	display: block;
+	top:257px !important;
+	bottom:auto !important;
+	color: #fff;
+	position: absolute;
+	z-index: 4;
+	transition:all 0.3s ease;
+	background: rgb(54,72,144);
+background: linear-gradient(90deg, rgba(54,72,144,1) 0%, rgba(101,122,202,1) 100%);
+}
+
 .tela {
     display: flex;
     align-items: center;
@@ -44,12 +64,6 @@
     font-size: 1.2em;
     font-weight: 600;
     transition: color 0.3s ease;
-}
-
-.tela i {
-    margin-right: 10px;
-    font-size: 1.3em;
-    color: #0066cc;
 }
 
 .tela:hover {

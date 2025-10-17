@@ -68,21 +68,44 @@
 }
 
 /* Телефон */
-.ftel {
-    text-align: right;
+.fadd, .ftel {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-left:30px;
 }
-
+.fadd:before, .ftel:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 25px;
+	height: 25px;
+	display: block;
+	color: #e23c40;
+	font-size: 18px;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 900;
+}
+.fadd:before {
+	content:"\f3c5";}
+.ftel:before {
+	content:"\f879";
+}
 .ftel span {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
+	font-size: 16px;
+	font-weight: 700;
+	color: #284693;
+	font-family: 'Montserrat', sans-serif;
+}
+.ftel i {
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: 600;
+	font-style: normal;
+	color: #1b202e;
 }
 
-.ftel i {
-    font-style: normal;
-    color: #666;
-}
 
 /* Нижняя часть */
 .footer .f.sb.content-wrapper:last-child {

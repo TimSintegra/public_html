@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-17 09:59:15
+/* Smarty version 5.4.3, created on 2025-10-17 12:40:46
   from 'file:/opt/lampp/htdocs/public_html//templates/default/header.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_68f1f753e815f4_10963738',
+  'unifunc' => 'content_68f21d2eb768e8_27920380',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7f2c710843775b8f9f2773f882ef571afa7bcf9e' => 
     array (
       0 => '/opt/lampp/htdocs/public_html//templates/default/header.tpl',
-      1 => 1760687901,
+      1 => 1760697643,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_68f1f753e815f4_10963738 (\Smarty\Template $_smarty_tpl) {
+function content_68f21d2eb768e8_27920380 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><head>
     <meta charset="UTF-8">
@@ -40,6 +40,8 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 /style.css" rel="stylesheet">
     <link href="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /css/footer/style.css" rel="stylesheet">
+    <link href="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+/css/icons/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
