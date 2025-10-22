@@ -34,29 +34,36 @@
 <section class="city-stats-section">
     <div class="container">
         <div class="cities-list">
+            <h2 class="section-subtitle facts-title">{$header_facts}</h2>
+            <h2 class="section-subtitle geography-title">{$header_geography_projects}</h2>
+            <img src="{$TPL_URL}/images/mappng.png" alt="" class="section-image">
             <ul class="cities-items">
                 {foreach $cities_list as $cities}
                     <li>{$cities}</li>
                 {/foreach}
             </ul>
+            <img src="{$TPL_URL}/images/city.png" alt="" class="city-image">
         </div>
         <div class="stats-sections">
             {foreach from=$stats_data key=section_name item=section}
                 <div class="stats-section">
-                    <h3 class="stats-title">{$section.title}</h3>
+                    <h3 class="stats-title {$section.title|replace:' ':'-'|lower}">{$section.title}</h3>
                     <div class="stats-grid">
-                        {foreach from=$section.items item=item}
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <img src="{$TPL_URL}/images/{$item.icon}" alt="{$item.text}">
+                        {foreach from=$section.items item=item name=itemLoop}
+                            {if $smarty.foreach.itemLoop.index < 4}
+                                <div class="stat-item">
+                                    <div class="stat-icon">
+                                        <img src="{$TPL_URL}/images/{$item.icon}" alt="{$item.text}">
+                                    </div>
+                                    <div class="stat-value">{$item.value}</div>
+                                    <div class="stat-text">{$item.text}</div>
                                 </div>
-                                <div class="stat-value">{$item.value}</div>
-                                <div class="stat-text">{$item.text}</div>
-                            </div>
+                            {/if}
                         {/foreach}
                     </div>
                 </div>
             {/foreach}
+            <img src="{$TPL_URL}/images/mapping.png" alt="" class="section-image">
         </div>
     </div>
 </section>
