@@ -1,0 +1,194 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaf4fb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Секция контактов - Минималистичный дизайн */
+.contacts-section {
+    background: #ffffff;
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка с логотипом */
+.contacts-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.company-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.contacts-header h1 {
+    font-size: 2.5rem;
+    color: #145488;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Основной контент */
+.contacts-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Блок офисов */
+.offices-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.office-card {
+    background: #f8fbff;
+    border: 1px solid #e1edf7;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.office-card:hover {
+    box-shadow: 0 8px 24px rgba(22, 107, 182, 0.1);
+    transform: translateY(-4px);
+}
+
+.office-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.office-card h2 {
+    font-size: 1.5rem;
+    color: #166bb6;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.office-card p {
+    margin: 8px 0;
+    color: #234f73;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.office-card .country,
+.office-card .region {
+    color: #3aa1e4;
+    font-weight: 600;
+}
+
+.office-card .address {
+    color: #145488;
+    margin-bottom: 12px;
+}
+
+.office-card .email {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e1edf7;
+}
+
+.office-card .email a {
+    color: #166bb6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.office-card .email a:hover {
+    color: #3aa1e4;
+    text-decoration: underline;
+}
+
+/* Блок QR-кода */
+.qr-block {
+    position: sticky;
+    top: 100px;
+}
+
+.qr-card {
+    background: #ffffff;
+    border: 2px solid #e1edf7;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(22, 107, 182, 0.08);
+}
+
+.qr-card h3 {
+    font-size: 1.2rem;
+    color: #145488;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+}
+
+.qr-code {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 16px;
+    border-radius: 8px;
+}
+
+.qr-description {
+    font-size: 0.9rem;
+    color: #234f73;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .qr-block {
+        position: static;
+    }
+    
+    .qr-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-section {
+        padding: 60px 0;
+    }
+    
+    .contacts-header h1 {
+        font-size: 2rem;
+    }
+    
+    .office-card {
+        padding: 24px;
+    }
+    
+    .office-card h2 {
+        font-size: 1.3rem;
+    }
+}

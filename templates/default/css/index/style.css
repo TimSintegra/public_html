@@ -1,0 +1,925 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    background: #eaf4fb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* company-section */
+.company-section {
+    background: linear-gradient(120deg, #68b8f6 0%, #015ea6 100%);
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #eaf4fb;
+    position: relative;
+    overflow: hidden;
+}
+
+.company-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,135,192,0.15), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.company-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+.company-text-wrapper {
+    flex: 1;
+    max-width: 600px;
+}
+
+.company-text {
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #fff;
+}
+
+.company-info {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e7f5ff;
+    border-left: 3px solid #008cb7;
+    padding-left: 20px;
+}
+
+.company-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(40, 103, 180, 0.20);
+}
+
+.services-list {
+    margin-top: 60px;
+}
+
+.services-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.services-items li {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 200px;
+    background: linear-gradient(135deg, #eaf4fb 60%, #b6e4fa 110%);
+    border: 1.5px solid #66bff5;
+    border-radius: 18px;
+    padding: 28px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: #125385;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-items li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #61c2fd4d 80%, transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.services-items li:hover::before {
+    left: 100%;
+}
+
+.services-items li:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #019ae9;
+    box-shadow: 0 20px 40px #61c2fd40;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .company-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .company-image {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .services-items li {
+        flex: 1 1 100%;
+    }
+}
+
+/* company-way */
+.company-way {
+    background: linear-gradient(120deg, #fafdff 70%, #cbe2f8 100%);
+    padding: 70px 0 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #135088;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #155ca3;
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+}
+
+.subsection-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #319be3;
+    margin-bottom: 40px;
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 34px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #67b9f5 0%, #015ea6 100%);
+    border-radius: 2px;
+    z-index: 0;
+}
+
+/* Milestone */
+.milestone {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.year {
+    flex: 0 0 68px;
+    min-width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, #68b8f6 60%, #015ea6 110%);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px 0 #68b8f62b;
+    margin-right: 30px;
+    margin-top: 0;
+    border: 3px solid #eaf4fb;
+    transition: background 0.2s;
+}
+
+.milestone:hover .year {
+    background: linear-gradient(135deg, #21a3fe 50%, #015ea6 120%);
+}
+
+.description {
+    padding: 18px 26px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px 0 #73b3db19;
+    color: #196ba6;
+    font-size: 1.08rem;
+    font-weight: 500;
+    border-left: 4px solid #68b8f6;
+    line-height: 1.58;
+    min-width: 0;
+    max-width: 600px;
+    transition: box-shadow 0.2s;
+}
+
+.milestone:hover .description {
+    box-shadow: 0 6px 32px 0 #81cafa28;
+    border-left: 4px solid #21a3fe;
+}
+
+@media (max-width: 900px) {
+    .timeline {
+        max-width: 98vw;
+    }
+    .year {
+        margin-right: 20px;
+        font-size: 1.08rem;
+    }
+    .description {
+        padding: 16px 14px;
+        font-size: 1em;
+        max-width: 92vw;
+    }
+}
+@media (max-width: 600px) {
+    .timeline {
+        gap: 22px;
+    }
+    .milestone {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+    .year {
+        margin: 0 0 8px 0;
+        align-self: flex-start;
+        font-size: 1em;
+        height: 43px;
+        min-width: 43px;
+        max-width: 43px;
+    }
+    .description {
+        padding: 13px 8px;
+        font-size: 0.97em;
+        border-left-width: 3px;
+        border-radius: 10px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* city-stats-section */
+/* Секция с географией и статистикой */
+.city-stats-section {
+    background: linear-gradient(120deg, #fafdff 70%, #d9ecfa 100%);
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #145488;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Заголовки */
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 22px;
+    font-weight: 700;
+    color: #166bb6;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+
+.facts-title {
+    font-size: 2.1rem;
+    margin-top: 0;
+}
+
+
+.geography-title {
+    font-size: 1.4rem;
+    color: #3aa1e4;
+    margin-bottom: 50px;
+}
+
+
+/* Изображения карты и города */
+.section-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 36px rgba(46, 123, 197, 0.18);
+}
+
+
+.city-image {
+    display: block;
+    margin: 40px auto 0;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(54, 133, 199, 0.18);
+}
+
+
+/* Список городов - Цветные бейджи с иконкой */
+.cities-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 40px auto 20px;
+    max-width: 900px;
+    gap: 14px;
+}
+
+.cities-items li {
+    background: linear-gradient(135deg, #166bb6 0%, #3aa1e4 100%);
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 18px 10px 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(22, 107, 182, 0.25);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cities-items li::before {
+    content: '📍';
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.cities-items li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cities-items li:hover::after {
+    opacity: 1;
+}
+
+.cities-items li:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(22, 107, 182, 0.35);
+}
+
+
+
+/* Блоки статистики */
+.stats-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+
+.stats-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(22, 93, 164, 0.05);
+    padding: 36px 26px;
+    border-top: 4px solid #5ab6f6;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.stats-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(22, 93, 164, 0.15);
+}
+
+
+.stats-title {
+    font-size: 1.3rem;
+    color: #1763ad;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+/* Внутренняя сетка */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* всегда 2 колонки */
+    gap: 28px 40px;
+    justify-items: center;
+}
+
+
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.stat-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+
+.stat-item:hover .stat-icon img {
+    transform: scale(1.1);
+}
+
+
+.stat-value {
+    font-size: 1.6rem;
+    color: #037dd4;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+.stat-text {
+    font-size: 1rem;
+    color: #234f73;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section-subtitle {
+        font-size: 1.6rem;
+    }
+
+
+    .geography-title {
+        font-size: 1.2rem;
+    }
+
+
+    .stats-grid {
+        gap: 18px;
+    }
+
+
+    .city-image {
+        max-width: 300px;
+    }
+
+
+    .facts-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* partners-section */
+.partners-section {
+    background: #fafdff;
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #164d7a;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #1261b3;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+.partners-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Карточка партнера */
+.partner-card {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(44, 144, 218, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0eef6;
+    gap: 0;
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease-in-out;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 38px rgba(38, 135, 209, 0.15);
+}
+
+/* Левая часть: фото и логотип */
+.partner-visual {
+    position: relative;
+    background: linear-gradient(145deg, #e6f4ff 0%, #b8e1fd 100%);
+}
+
+.partner-image {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.partner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.partner-logo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 4px 20px rgba(44, 123, 190, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #eefaff;
+}
+
+.partner-logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Правая часть — текстовая */
+.partner-info {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+.partner-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #144e84;
+    margin-bottom: 16px;
+}
+
+.works-title {
+    font-size: 1.05rem;
+    color: #219be3;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.works-list {
+    list-style-position: outside;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #184d7a;
+    margin: 0 0 18px 0;
+}
+
+.partner-additional-info {
+    border-left: 4px solid #68b8f6;
+    background: #f5fbff;
+    padding: 10px 18px;
+    font-size: 0.98rem;
+    color: #28618f;
+    border-radius: 0 12px 12px 0;
+}
+
+/* Адаптивность */
+@media (max-width: 930px) {
+    .partner-card {
+        grid-template-columns: 1fr;
+    }
+    .partner-logo {
+        top: 20px;
+        left: 20px;
+        bottom: auto;
+    }
+    .partner-info {
+        padding: 24px 22px;
+    }
+    .partner-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* projects-section */
+.projects-section {
+    background: linear-gradient(120deg, #fafdff 70%, #dceefd 100%);
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #143d63;
+}
+
+.projects-section .section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #166bb6;
+    margin-bottom: 50px;
+    letter-spacing: 0.01em;
+}
+
+/* Контейнер со столбцами */
+.projects-columns {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Каждый столбец */
+.projects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    flex: 1 1 500px;
+}
+
+/* Карточки проектов */
+.project-item {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(33,113,180,0.1);
+    border-top: 5px solid #5ab9f8;
+    padding: 30px 26px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.project-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 38px rgba(33,113,180,0.16);
+    border-top-color: #189ae2;
+}
+
+/* Заголовок клиента */
+.project-client {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #135d9e;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.project-client::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(130deg, #68b8f6, #015ea6);
+    border-radius: 50%;
+}
+
+/* Описание */
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2a5b88;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .projects-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .projects-column {
+        flex: 1 1 100%;
+    }
+    .project-item {
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+    .project-client {
+        font-size: 1.05rem;
+    }
+}
+
+/* Секция контактов - Минималистичный дизайн */
+.contacts-section {
+    background: #ffffff;
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка с логотипом */
+.contacts-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.company-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.contacts-header h1 {
+    font-size: 2.5rem;
+    color: #145488;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Основной контент */
+.contacts-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Блок офисов */
+.offices-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.office-card {
+    background: #f8fbff;
+    border: 1px solid #e1edf7;
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.office-card:hover {
+    box-shadow: 0 8px 24px rgba(22, 107, 182, 0.1);
+    transform: translateY(-4px);
+}
+
+.office-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.office-card h2 {
+    font-size: 1.5rem;
+    color: #166bb6;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.office-card p {
+    margin: 8px 0;
+    color: #234f73;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.office-card .country,
+.office-card .region {
+    color: #3aa1e4;
+    font-weight: 600;
+}
+
+.office-card .address {
+    color: #145488;
+    margin-bottom: 12px;
+}
+
+.office-card .email {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e1edf7;
+}
+
+.office-card .email a {
+    color: #166bb6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.office-card .email a:hover {
+    color: #3aa1e4;
+    text-decoration: underline;
+}
+
+/* Блок QR-кода */
+.qr-block {
+    position: sticky;
+    top: 100px;
+}
+
+.qr-card {
+    background: #ffffff;
+    border: 2px solid #e1edf7;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(22, 107, 182, 0.08);
+}
+
+.qr-card h3 {
+    font-size: 1.2rem;
+    color: #145488;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+}
+
+.qr-code {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 16px;
+    border-radius: 8px;
+}
+
+.qr-description {
+    font-size: 0.9rem;
+    color: #234f73;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .qr-block {
+        position: static;
+    }
+    
+    .qr-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-section {
+        padding: 60px 0;
+    }
+    
+    .contacts-header h1 {
+        font-size: 2rem;
+    }
+    
+    .office-card {
+        padding: 24px;
+    }
+    
+    .office-card h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-29 14:00:41
-  from 'file:/opt/lampp/htdocs/public_html//templates/default/modules/index/show.tpl' */
+/* Smarty version 5.4.3, created on 2025-11-12 08:48:01
+  from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69020ff9ade167_88473796',
+  'unifunc' => 'content_69143bb12a2a56_25928169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c8806e8c52a657e4da7af51946a2859fbbadb832' => 
+    '7167a84b46059642bd7fd8f3e9e8b1225e9593e1' => 
     array (
-      0 => '/opt/lampp/htdocs/public_html//templates/default/modules/index/show.tpl',
-      1 => 1761742221,
+      0 => '/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl',
+      1 => 1762933673,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69020ff9ade167_88473796 (\Smarty\Template $_smarty_tpl) {
+function content_69143bb12a2a56_25928169 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/index';
 ?><section class="company-section">
     <div class="container">
@@ -92,8 +92,6 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
 </h2>
             <h2 class="section-subtitle geography-title"><?php echo $_smarty_tpl->getValue('header_geography_projects');?>
 </h2>
-            <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/mappng.png" alt="" class="section-image">
             <ul class="cities-items">
                 <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('cities_list'), 'cities');
@@ -107,8 +105,6 @@ $foreach2DoElse = false;
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
             </ul>
-            <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/city.png" alt="" class="city-image">
         </div>
         <div class="stats-sections">
             <?php
@@ -283,26 +279,83 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
 
 <section class="contacts-section">
     <div class="container">
-        <div class="contacts-wrapper" style="display: flex; gap: 250px;">
-            <div class="contacts-qr">
-                <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/contacts-main-qr-code.png" alt="QR-код контактов">
+        <div class="contacts-header">
+            <h1><?php echo $_smarty_tpl->getValue('contactsData')['title'];?>
+</h1>
+        </div>
+        
+        <div class="contacts-content">
+            <!-- Левая колонка: Офисы -->
+            <div class="offices-block">
+                <?php
+$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('contactsData')['offices'], 'office');
+$foreach9DoElse = true;
+foreach ($_from ?? [] as $_smarty_tpl->getVariable('office')->value) {
+$foreach9DoElse = false;
+?>
+                    <div class="office-card">
+                        <?php if ($_smarty_tpl->getValue('office')['icon']) {?>
+                            <div class="office-icon"><?php echo $_smarty_tpl->getValue('office')['icon'];?>
+</div>
+                        <?php }?>
+                        <h2><?php echo $_smarty_tpl->getValue('office')['title'];?>
+</h2>
+                        <p class="country"><?php echo $_smarty_tpl->getValue('office')['country'];?>
+</p>
+                        <?php if ($_smarty_tpl->getValue('office')['region']) {?>
+                            <p class="region"><?php echo $_smarty_tpl->getValue('office')['region'];?>
+</p>
+                        <?php }?>
+                        <p class="address"><?php echo $_smarty_tpl->getValue('office')['address'];?>
+</p>
+                        <p class="email">Email: <a href="mailto:<?php echo $_smarty_tpl->getValue('office')['email'];?>
+"><?php echo $_smarty_tpl->getValue('office')['email'];?>
+</a></p>
+                    </div>
+                <?php
+}
+$_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
             </div>
-            <div class="contacts-info">
-                <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/contacts-image.png" alt="Изображение контактов">
-                <h2>Офис в Москве:</h2>
-                <p>Российская Федерация</p>
-                <p>г. Москва, ул. Мотросская Тишина, 23с1,</p>
-                <p>помещение XXVI, ком.1</p>
-                <p>Email: <a href="mailto:office@s-nk.su">office@s-nk.su</a></p>
-                <h2>Офис и производственная база в Нижнекамске:</h2>
-                <p>Российская Федерация</p>
-                <p>Республика Татарстан</p>
-                <p>г. Нижнекамск, БСИ, ул. Заводская 3 В</p>
-                <p>Email: <a href="mailto:info@s-nk.su">info@s-nk.su</a></p>
+            
+            <!-- Правая колонка: QR-код -->
+            <div class="qr-block">
+                <div class="qr-card">
+                    <h3><?php echo $_smarty_tpl->getValue('contactsData')['qr']['title'];?>
+</h3>
+                    <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+/images/<?php echo $_smarty_tpl->getValue('contactsData')['qr']['image'];?>
+" alt="QR-код" class="qr-code">
+                    <p class="qr-description"><?php echo $_smarty_tpl->getValue('contactsData')['qr']['description'];?>
+</p>
+                </div>
             </div>
         </div>
     </div>
-</section><?php }
+</section>
+
+
+<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
+<div style="display: none;" id="bell2">
+    <h2>Перезвонить Вам?</h2>
+    <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
+    <form>
+        <div class="frm-blk w12">
+            <input name="uname1" id="uname1" type="text" class="styler" placeholder="Ваше Имя">
+        </div>
+        <div class="frm-blk w12">
+            <input name="tel1" id="tel1" type="text" class="styler" placeholder="Телефон">
+        </div>
+        <div class="frm-blk w12">
+            <input name="email1" id="email1" type="text" class="styler" placeholder="E-mail">
+        </div>
+        <div class="frm-blk w12">
+            <textarea  name="message1" id="message1" class="styler" placeholder="Текст сообщения" rows="5"></textarea>
+        </div>
+        <div class="w12 center">
+            <input type="submit" value="Отправить заявку" class="wh_btn mbtn" id="submit1">
+        </div>
+    </form>
+</div><?php }
 }
