@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-11-12 09:03:04
+/* Smarty version 5.4.3, created on 2025-11-13 13:53:39
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69143f38ea23b1_47364494',
+  'unifunc' => 'content_6915d4d3677870_62126263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02170ae5305e4940344840c8a0f797436538f53' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl',
-      1 => 1762934495,
+      1 => 1762947890,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69143f38ea23b1_47364494 (\Smarty\Template $_smarty_tpl) {
+function content_6915d4d3677870_62126263 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/contacts';
 ?><section class="contacts-section">
     <div class="container">

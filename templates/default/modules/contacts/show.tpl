@@ -34,29 +34,3 @@
         </div>
     </div>
 </section>
-
-
-
-{include file="$TPL_PATH/scripts.tpl"}
-
-<div style="display: none;" id="bell2">
-    <h2>Перезвонить Вам?</h2>
-    <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
-    <form>
-        <div class="frm-blk w12">
-            <input name="uname1" id="uname1" type="text" class="styler" placeholder="Ваше Имя">
-        </div>
-        <div class="frm-blk w12">
-            <input name="tel1" id="tel1" type="text" class="styler" placeholder="Телефон">
-        </div>
-        <div class="frm-blk w12">
-            <input name="email1" id="email1" type="text" class="styler" placeholder="E-mail">
-        </div>
-        <div class="frm-blk w12">
-            <textarea  name="message1" id="message1" class="styler" placeholder="Текст сообщения" rows="5"></textarea>
-        </div>
-        <div class="w12 center">
-            <input type="submit" value="Отправить заявку" class="wh_btn mbtn" id="submit1">
-        </div>
-    </form>
-</div>

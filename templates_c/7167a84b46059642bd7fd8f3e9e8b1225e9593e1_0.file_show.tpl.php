@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-11-12 08:48:01
+/* Smarty version 5.4.3, created on 2025-11-12 12:48:35
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69143bb12a2a56_25928169',
+  'unifunc' => 'content_6914741350ff79_77288578',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7167a84b46059642bd7fd8f3e9e8b1225e9593e1' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl',
-      1 => 1762933673,
+      1 => 1762948107,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69143bb12a2a56_25928169 (\Smarty\Template $_smarty_tpl) {
+function content_6914741350ff79_77288578 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/index';
 ?><section class="company-section">
     <div class="container">
@@ -331,31 +331,5 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
             </div>
         </div>
     </div>
-</section>
-
-
-<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>
-
-<div style="display: none;" id="bell2">
-    <h2>Перезвонить Вам?</h2>
-    <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
-    <form>
-        <div class="frm-blk w12">
-            <input name="uname1" id="uname1" type="text" class="styler" placeholder="Ваше Имя">
-        </div>
-        <div class="frm-blk w12">
-            <input name="tel1" id="tel1" type="text" class="styler" placeholder="Телефон">
-        </div>
-        <div class="frm-blk w12">
-            <input name="email1" id="email1" type="text" class="styler" placeholder="E-mail">
-        </div>
-        <div class="frm-blk w12">
-            <textarea  name="message1" id="message1" class="styler" placeholder="Текст сообщения" rows="5"></textarea>
-        </div>
-        <div class="w12 center">
-            <input type="submit" value="Отправить заявку" class="wh_btn mbtn" id="submit1">
-        </div>
-    </form>
-</div><?php }
+</section><?php }
 }

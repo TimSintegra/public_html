@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-29 14:41:59
+/* Smarty version 5.4.3, created on 2025-11-12 12:48:35
   from 'file:/opt/lampp/htdocs/public_html/templates/default/layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_690219a7dcc6b7_26154729',
+  'unifunc' => 'content_691474134f4305_57703956',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bdd64f3de665a8c4bb7e6e7385d270323892682' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/layout.tpl',
-      1 => 1760685620,
+      1 => 1762948102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_690219a7dcc6b7_26154729 (\Smarty\Template $_smarty_tpl) {
+function content_691474134f4305_57703956 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><!DOCTYPE html>
 <html>
@@ -43,19 +43,61 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
     </div>
 </div>
 
-<!-- 
-<div class="cao">
-    <ul class="us">
-        <li><a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
-"><i class="far fa-phone-alt"></i></a></li>
-        <li><a data-fancybox="bell2" data-src="#bell2" href="javascript:;"><i class="far fa-envelope"></i></a></li>
-        <li><a target="_blank"
+<div class="floating-contacts">
+    <ul class="floating-contacts__list">
+        <li class="floating-contacts__item">
+            <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
+" class="floating-contacts__link" title="Позвонить">
+                <span class="emoji-icon">📞</span>
+            </a>
+        </li>
+        <li class="floating-contacts__item">
+            <a data-fancybox="bell2" data-src="#bell2" href="javascript:;" class="floating-contacts__link" title="Написать">
+                <span class="emoji-icon">✉️</span>
+            </a>
+        </li>
+        <li class="floating-contacts__item">
+            <a target="_blank" 
                href="https://api.whatsapp.com/send?phone=<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
-&text=Здравствуйте, у меня возник вопрос. Могу получить консультацию?"
-               class="whts"><i class="fab fa-whatsapp"></i></a></li>
+&text=Здравствуйте, у меня возник вопрос. Могу получить консультацию?" 
+               class="floating-contacts__link floating-contacts__link--whatsapp" 
+               title="WhatsApp">
+                <span class="emoji-icon">💬</span>
+            </a>
+        </li>
     </ul>
-</div> 
--->
+</div>
+
+<!-- Модальное окно обратной связи -->
+<div style="display: none;" id="bell2">
+    <div class="callback-modal">
+        <h2>Перезвонить Вам?</h2>
+        <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
+        <form id="callbackForm">
+            <div class="form-group">
+                <input name="uname" id="uname" type="text" placeholder="Ваше Имя" required>
+            </div>
+            <div class="form-group">
+                <input name="tel" id="tel" type="tel" placeholder="Телефон" required>
+            </div>
+            <div class="form-group">
+                <input name="email" id="email" type="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <textarea name="message" id="message" placeholder="Текст сообщения" rows="5"></textarea>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </div>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</div>
+
+<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
+
 
 <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/modules/".((string)$_smarty_tpl->getValue('MODULE_PATH'))."/".((string)$_smarty_tpl->getValue('MODULE_ACT')).".tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
@@ -64,5 +106,6 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?>
 
 </body>
-</html><?php }
+</html>
+<?php }
 }

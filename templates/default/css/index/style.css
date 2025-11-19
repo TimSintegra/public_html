@@ -923,3 +923,120 @@ body {
         font-size: 1.3rem;
     }
 }
+/* ========================================
+   Плавающие кнопки связи (Floating Contacts)
+   ======================================== */
+
+.floating-contacts {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.floating-contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.floating-contacts__item {
+    display: block;
+}
+
+.floating-contacts__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #3aa1e4;
+    font-size: 1.4rem;
+    box-shadow: 0 2px 10px rgba(58, 161, 228, 0.15);
+    border: 1px solid rgba(58, 161, 228, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.floating-contacts__link:hover {
+    background: #3aa1e4;
+    color: #ffffff;
+    border-color: #3aa1e4;
+    box-shadow: 0 6px 24px rgba(58, 161, 228, 0.4);
+    transform: translateX(6px);
+    text-decoration: none;
+}
+
+.floating-contacts__link:active {
+    transform: translateX(4px) scale(0.95);
+}
+
+/* Специальный стиль для WhatsApp */
+.floating-contacts__link--whatsapp {
+    color: #25D366;
+    border-color: rgba(37, 211, 102, 0.25);
+}
+
+.floating-contacts__link--whatsapp:hover {
+    background: #25D366;
+    color: #ffffff;
+    border-color: #25D366;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+}
+
+.floating-contacts__link i {
+    font-size: 1.35em;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .floating-contacts {
+        left: 15px;
+    }
+    
+    .floating-contacts__link {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-contacts {
+        left: 10px;
+    }
+    
+    .floating-contacts__link {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+    
+    .floating-contacts__list {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-contacts {
+        bottom: 20px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .floating-contacts__list {
+        flex-direction: row;
+        gap: 12px;
+    }
+}
