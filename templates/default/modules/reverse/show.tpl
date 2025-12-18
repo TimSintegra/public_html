@@ -11,37 +11,37 @@
                 </p>
 
                 <div class="reverse-engineering__grid">
-                    <a href="{$MAIN_URL}/reverse/scan.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/scan.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             3D‑сканирование изделий и узлов
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse/model.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/model.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             3D‑моделирование по «облаку точек»
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse/dimension.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/dimension.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Образмеривание и анализ отклонений
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse/reverse-eng.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/reverse-eng.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Обратное проектирование (реверс‑инжиниринг)
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse/docs.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/docs.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Разработка конструкторской документации
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse/print.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/print.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Подготовка моделей для 3D/5D‑печати и механообработки
                         </span>
