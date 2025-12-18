@@ -29,7 +29,7 @@
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/reverse-eng.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/reverseeng.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Обратное проектирование (реверс‑инжиниринг)
                         </span>

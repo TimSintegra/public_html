@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-18 18:55:47
+/* Smarty version 5.4.3, created on 2025-12-18 22:44:53
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/reverse/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69444023338930_67209636',
+  'unifunc' => 'content_694475d5753364_33564894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd74473efdf8f76f91d476a6319ddd7cafefb47d' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/reverse/show.tpl',
-      1 => 1766080464,
+      1 => 1766094288,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69444023338930_67209636 (\Smarty\Template $_smarty_tpl) {
+function content_694475d5753364_33564894 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/reverse';
 ?><section class="reverse-engineering">
     <div class="container">
@@ -59,7 +59,7 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse-eng.html" class="reverse-engineering__item">
+/reverseeng.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Обратное проектирование (реверс‑инжиниринг)
                         </span>
