@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-18 18:31:25
+/* Smarty version 5.4.3, created on 2025-12-18 18:55:47
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/reverse/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69443a6d951d54_88944905',
+  'unifunc' => 'content_69444023338930_67209636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd74473efdf8f76f91d476a6319ddd7cafefb47d' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/reverse/show.tpl',
-      1 => 1766079079,
+      1 => 1766080464,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69443a6d951d54_88944905 (\Smarty\Template $_smarty_tpl) {
+function content_69444023338930_67209636 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/reverse';
 ?><section class="reverse-engineering">
     <div class="container">
@@ -45,35 +45,35 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse/model.html" class="reverse-engineering__item">
+/model.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             3D‑моделирование по «облаку точек»
                         </span>
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse/dimension.html" class="reverse-engineering__item">
+/dimension.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Образмеривание и анализ отклонений
                         </span>
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse/reverse-eng.html" class="reverse-engineering__item">
+/reverse-eng.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Обратное проектирование (реверс‑инжиниринг)
                         </span>
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse/docs.html" class="reverse-engineering__item">
+/docs.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Разработка конструкторской документации
                         </span>
                     </a>
 
                     <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/reverse/print.html" class="reverse-engineering__item">
+/print.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Подготовка моделей для 3D/5D‑печати и механообработки
                         </span>
