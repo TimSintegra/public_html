@@ -41,7 +41,7 @@
                         </span>
                     </a>
 
-                    <a href="{$MAIN_URL}/print.html" class="reverse-engineering__item">
+                    <a href="{$MAIN_URL}/printing.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
                             Подготовка моделей для 3D/5D‑печати и механообработки
                         </span>

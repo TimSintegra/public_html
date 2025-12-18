@@ -1,0 +1,112 @@
+.print-hero {
+    padding: 48px 0 40px;
+    background: #ffffff;  /* Белый как у других страниц */
+}
+
+.print-title {
+    font-size: 2.8rem;
+    color: #123a5d;  /* Синий как у других */
+    text-align: center;  /* Выравнивание как у других */
+    margin: 0;
+}
+
+.print-intro {
+    font-size: 1.6rem;
+    color: #234f73;  /* Тёмно-синий */
+    text-align: left;
+}
+
+
+.print-benefits {
+    font-size: 1.4rem;
+    color: #45627d;  /* Серо-синий */
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Галерея 12 фото — 4x3 сетка */
+
+.print-gallery {
+    padding: 40px 0 60px;
+    background: #f8f9fa;
+}
+
+.print-gallery__title {
+    margin: 0 0 32px;
+    font-size: 1.8rem;
+    color: #123a5d;
+    text-align: center;
+}
+
+.print-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.print-photo {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.print-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.print-photo img {
+    display: block;
+    width: 100%;
+    height: 200px;  /* Увеличили высоту */
+    object-fit: contain;  /* ✅ КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: contain вместо cover */
+    object-position: center;
+    background: #ffffff;
+}
+
+.print-photo figcaption {
+    margin: 5px 0px;
+    font-size: 1.2rem;
+    color: #45627d;
+    background: #ffffff;
+    text-align: center;
+}
+
+/* адаптив */
+
+@media (max-width: 1200px) {
+    .print-gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .print-gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .print-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .print-gallery__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, minmax(0, 1fr));
+    }
+
+    .print-photo img {
+        height: 160px;
+    }
+}
