@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-11 16:42:52
-  from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl' */
+/* Smarty version 5.4.3, created on 2025-12-11 15:31:11
+  from 'file:/opt/lampp/htdocs/public_html/templates/default/components/contacts-section.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_693ae67cb96744_14236423',
+  'unifunc' => 'content_693ad5af5155e0_58983226',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd02170ae5305e4940344840c8a0f797436538f53' => 
+    '65eae4ecd40352e5c5f8ec2e37a05189a8669f99' => 
     array (
-      0 => '/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl',
-      1 => 1765467413,
+      0 => '/opt/lampp/htdocs/public_html/templates/default/components/contacts-section.tpl',
+      1 => 1765457477,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_693ae67cb96744_14236423 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/contacts';
+function content_693ad5af5155e0_58983226 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/components';
 ?><section class="contacts-section">
     <div class="container">
         <div class="contacts-header">
@@ -34,9 +34,9 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/
             <div class="offices-block">
                 <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('contactsData')['offices'], 'office');
-$foreach9DoElse = true;
+$foreach5DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('office')->value) {
-$foreach9DoElse = false;
+$foreach5DoElse = false;
 ?>
                     <div class="office-card">
                         <?php if ($_smarty_tpl->getValue('office')['icon']) {?>

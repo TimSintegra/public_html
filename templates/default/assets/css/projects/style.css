@@ -1,0 +1,98 @@
+/* projects-section */
+.projects-section {
+    background: linear-gradient(120deg, #fafdff 70%, #dceefd 100%);
+    padding: 80px 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: #143d63;
+}
+
+.projects-section .section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #166bb6;
+    margin-bottom: 50px;
+    letter-spacing: 0.01em;
+}
+
+/* Контейнер со столбцами */
+.projects-columns {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Каждый столбец */
+.projects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    flex: 1 1 500px;
+}
+
+/* Карточки проектов */
+.project-item {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(33,113,180,0.1);
+    border-top: 5px solid #5ab9f8;
+    padding: 30px 26px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.project-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 38px rgba(33,113,180,0.16);
+    border-top-color: #189ae2;
+}
+
+/* Заголовок клиента */
+.project-client {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #135d9e;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.project-client::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(130deg, #68b8f6, #015ea6);
+    border-radius: 50%;
+}
+
+/* Описание */
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2a5b88;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .projects-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .projects-column {
+        flex: 1 1 100%;
+    }
+    .project-item {
+        padding: 22px 18px;
+        border-radius: 12px;
+    }
+    .project-client {
+        font-size: 1.05rem;
+    }
+}

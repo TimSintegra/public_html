@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-11-12 12:48:35
+/* Smarty version 5.4.3, created on 2025-12-12 18:59:12
   from 'file:/opt/lampp/htdocs/public_html/templates/default/layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_691474134f4305_57703956',
+  'unifunc' => 'content_693c57f0d52208_78577807',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bdd64f3de665a8c4bb7e6e7385d270323892682' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/layout.tpl',
-      1 => 1762948102,
+      1 => 1765562332,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_691474134f4305_57703956 (\Smarty\Template $_smarty_tpl) {
+function content_693c57f0d52208_78577807 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><!DOCTYPE html>
 <html>
@@ -28,82 +28,96 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?>
 <body <?php if ($_smarty_tpl->getValue('MODULE_PATH') != 'index') {?>class="inpage"<?php }?>>
 
-<div class="headerm"><a href="#menu"><span></span></a></div>
+<div class="page">
 
-<div class="header">
-    <div class="f sb ac content-wrapper">
-        <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
-/" class="logo"><img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/images/new_sintegra_logo.png"/></a>
-        <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+    <div class="page__header">
+        <div class="headerm"><a href="#menu"><span></span></a></div>
+
+        <div class="header">
+            <div class="f sb ac content-wrapper">
+                <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
+/" class="logo">
+                    <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+/assets/images/new_sintegra_logo.png"/>
+                </a>
+                <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
-        <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
-" class="tela"><i class="fas fa-phone-alt"></i><span><?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
-</span></a>
+                <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
+" class="tela">
+                    <i class="fas fa-phone-alt"></i><span><?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
+</span>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="floating-contacts">
-    <ul class="floating-contacts__list">
-        <li class="floating-contacts__item">
-            <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
+    <main class="page__content">
+
+        <div class="floating-contacts">
+            <ul class="floating-contacts__list">
+                <li class="floating-contacts__item">
+                    <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
 " class="floating-contacts__link" title="Позвонить">
-                <span class="emoji-icon">📞</span>
-            </a>
-        </li>
-        <li class="floating-contacts__item">
-            <a data-fancybox="bell2" data-src="#bell2" href="javascript:;" class="floating-contacts__link" title="Написать">
-                <span class="emoji-icon">✉️</span>
-            </a>
-        </li>
-        <li class="floating-contacts__item">
-            <a target="_blank" 
-               href="https://api.whatsapp.com/send?phone=<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
-&text=Здравствуйте, у меня возник вопрос. Могу получить консультацию?" 
-               class="floating-contacts__link floating-contacts__link--whatsapp" 
-               title="WhatsApp">
-                <span class="emoji-icon">💬</span>
-            </a>
-        </li>
-    </ul>
+                        <span class="emoji-icon">📞</span>
+                    </a>
+                </li>
+                <li class="floating-contacts__item">
+                    <a data-fancybox="bell2" data-src="#bell2" href="javascript:;" class="floating-contacts__link" title="Написать">
+                        <span class="emoji-icon">✉️</span>
+                    </a>
+                </li>
+                <li class="floating-contacts__item">
+                    <a target="_blank"
+                       href="https://api.whatsapp.com/send?phone=<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
+&text=Здравствуйте, у меня возник вопрос. Могу получить консультацию?"
+                       class="floating-contacts__link floating-contacts__link--whatsapp"
+                       title="WhatsApp">
+                        <span class="emoji-icon">💬</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Модальное окно обратной связи -->
+        <div style="display: none;" id="bell2">
+            <div class="callback-modal">
+                <h2>Перезвонить Вам?</h2>
+                <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
+                <form id="callbackForm">
+                    <div class="form-group">
+                        <input name="uname" id="uname" type="text" placeholder="Ваше Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input name="tel" id="tel" type="tel" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input name="email" id="email" type="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Текст сообщения" rows="5"></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                    </div>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+
+        <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
+        <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/modules/".((string)$_smarty_tpl->getValue('MODULE_PATH'))."/".((string)$_smarty_tpl->getValue('MODULE_ACT')).".tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
+    </main>
+
+    <footer class="page__footer">
+        <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+    </footer>
+
 </div>
-
-<!-- Модальное окно обратной связи -->
-<div style="display: none;" id="bell2">
-    <div class="callback-modal">
-        <h2>Перезвонить Вам?</h2>
-        <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
-        <form id="callbackForm">
-            <div class="form-group">
-                <input name="uname" id="uname" type="text" placeholder="Ваше Имя" required>
-            </div>
-            <div class="form-group">
-                <input name="tel" id="tel" type="tel" placeholder="Телефон" required>
-            </div>
-            <div class="form-group">
-                <input name="email" id="email" type="email" placeholder="E-mail">
-            </div>
-            <div class="form-group">
-                <textarea name="message" id="message" placeholder="Текст сообщения" rows="5"></textarea>
-            </div>
-            <div class="form-submit">
-                <button type="submit" class="submit-btn">Отправить заявку</button>
-            </div>
-            <div id="formMessage" class="form-message"></div>
-        </form>
-    </div>
-</div>
-
-<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/scripts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>
-
-
-
-<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/modules/".((string)$_smarty_tpl->getValue('MODULE_PATH'))."/".((string)$_smarty_tpl->getValue('MODULE_ACT')).".tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>
-
-<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>
 
 </body>
 </html>

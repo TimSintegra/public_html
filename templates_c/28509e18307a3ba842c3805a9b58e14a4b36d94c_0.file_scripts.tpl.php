@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-10-29 14:41:59
+/* Smarty version 5.4.3, created on 2025-11-19 10:58:24
   from 'file:/opt/lampp/htdocs/public_html/templates/default/scripts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_690219a7e58d68_13057437',
+  'unifunc' => 'content_691d94c0906771_60537396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28509e18307a3ba842c3805a9b58e14a4b36d94c' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/scripts.tpl',
-      1 => 1760687544,
+      1 => 1763546252,
       2 => 'file',
     ),
   ),
@@ -20,55 +20,55 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_690219a7e58d68_13057437 (\Smarty\Template $_smarty_tpl) {
+function content_691d94c0906771_60537396 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/eff.js"><?php echo '</script'; ?>
+/assets/js/eff.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery-3.1.1.js"><?php echo '</script'; ?>
+/assets/js/jquery-3.1.1.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery.spincrement.js"><?php echo '</script'; ?>
+/assets/js/jquery.spincrement.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery.sticky.js"><?php echo '</script'; ?>
+/assets/js/jquery.sticky.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/flexmenu.min.js"><?php echo '</script'; ?>
+/assets/js/flexmenu.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/materialize.js"><?php echo '</script'; ?>
+/assets/js/materialize.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/owl.carousel.js"><?php echo '</script'; ?>
+/assets/js/owl.carousel.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery.fancybox.js"><?php echo '</script'; ?>
+/assets/js/jquery.fancybox.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery.nicescroll.min.js"><?php echo '</script'; ?>
+/assets/js/jquery.nicescroll.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/jquery.liTextLength.js"><?php echo '</script'; ?>
+/assets/js/jquery.liTextLength.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/mmenu.js"><?php echo '</script'; ?>
+/assets/js/mmenu.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/js/my.js"><?php echo '</script'; ?>
+/assets/js/my.js"><?php echo '</script'; ?>
 > 
 
 <?php if ($_smarty_tpl->getValue('MODULE_PATH') == 'contacts') {

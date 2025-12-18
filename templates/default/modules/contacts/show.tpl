@@ -27,7 +27,7 @@
             <div class="qr-block">
                 <div class="qr-card">
                     <h3>{$contactsData.qr.title}</h3>
-                    <img src="{$TPL_URL}/images/{$contactsData.qr.image}" alt="QR-код" class="qr-code">
+                    <img src="{$TPL_URL}/assets/images/{$contactsData.qr.image}" alt="QR-код" class="qr-code">
                     <p class="qr-description">{$contactsData.qr.description}</p>
                 </div>
             </div>

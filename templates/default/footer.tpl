@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="f sb content-wrapper">
-        <a href="{$MAIN_URL}/" class="logo"><img src="{$TPL_URL}/images/new_sintegra_logo.png"/></a>
+        <a href="{$MAIN_URL}/" class="logo"><img src="{$TPL_URL}/assets/images/new_sintegra_logo.png"/></a>
         <ul class="navfoot">
             <li><a href="{$MAIN_URL}/" {if $MODULE_PATH == 'index'}class="active"{/if}>Главная</a></li>
             {foreach from=$mainMenu key=m item=n}
