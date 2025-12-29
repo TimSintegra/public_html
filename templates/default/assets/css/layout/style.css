@@ -196,19 +196,6 @@ body {
     transform: translateX(4px) scale(0.95);
 }
 
-/* Специальный стиль для WhatsApp */
-.floating-contacts__link--whatsapp {
-    color: #25D366;
-    border-color: rgba(37, 211, 102, 0.25);
-}
-
-.floating-contacts__link--whatsapp:hover {
-    background: #25D366;
-    color: #ffffff;
-    border-color: #25D366;
-    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
-}
-
 .floating-contacts__link i {
     font-size: 1.35em;
     line-height: 1;
@@ -231,7 +218,10 @@ body {
 
 @media (max-width: 768px) {
     .floating-contacts {
-        left: 10px;
+        bottom: 20px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .floating-contacts__link {
@@ -241,6 +231,7 @@ body {
     }
 
     .floating-contacts__list {
+        flex-direction: row;
         gap: 10px;
     }
 }

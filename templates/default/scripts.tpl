@@ -1,14 +1,3 @@
-<script src="{$TPL_URL}/assets/js/eff.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery-3.1.1.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery.spincrement.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery.sticky.js"></script>
-<script src="{$TPL_URL}/assets/js/flexmenu.min.js"></script>
-<script src="{$TPL_URL}/assets/js/materialize.js"></script>
-<script src="{$TPL_URL}/assets/js/owl.carousel.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery.fancybox.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery.nicescroll.min.js"></script>
-<script src="{$TPL_URL}/assets/js/jquery.liTextLength.js"></script>
-<script src="{$TPL_URL}/assets/js/mmenu.js"></script>
 <script src="{$TPL_URL}/assets/js/my.js"></script> 
 
 {if $MODULE_PATH == 'contacts'}

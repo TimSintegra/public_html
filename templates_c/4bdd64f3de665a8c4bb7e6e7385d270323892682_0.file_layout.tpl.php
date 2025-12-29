@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-12 18:59:12
+/* Smarty version 5.4.3, created on 2025-12-29 23:13:52
   from 'file:/opt/lampp/htdocs/public_html/templates/default/layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_693c57f0d52208_78577807',
+  'unifunc' => 'content_6952fd20dc0dd7_14043468',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bdd64f3de665a8c4bb7e6e7385d270323892682' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/layout.tpl',
-      1 => 1765562332,
+      1 => 1767046428,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_693c57f0d52208_78577807 (\Smarty\Template $_smarty_tpl) {
+function content_6952fd20dc0dd7_14043468 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><!DOCTYPE html>
 <html>
@@ -31,8 +31,6 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 <div class="page">
 
     <div class="page__header">
-        <div class="headerm"><a href="#menu"><span></span></a></div>
-
         <div class="header">
             <div class="f sb ac content-wrapper">
                 <a href="<?php echo $_smarty_tpl->getValue('MAIN_URL');?>
@@ -40,8 +38,14 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
                     <img src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /assets/images/new_sintegra_logo.png"/>
                 </a>
+
                 <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
+
+                <div class="headerm">
+                    <a href="#menu"><span></span></a>
+                </div>
+
                 <a href="tel:<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
 " class="tela">
                     <i class="fas fa-phone-alt"></i><span><?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>
@@ -50,6 +54,8 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
             </div>
         </div>
     </div>
+
+
 
     <main class="page__content">
 
@@ -62,10 +68,16 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
                     </a>
                 </li>
                 <li class="floating-contacts__item">
-                    <a data-fancybox="bell2" data-src="#bell2" href="javascript:;" class="floating-contacts__link" title="Написать">
-                        <span class="emoji-icon">✉️</span>
+                    <a data-fancybox="bell2"
+                    data-src="#bell2"
+                    href="javascript:;"
+                    class="floating-contacts__link floating-contacts__link--mail"
+                    title="Написать">
+                        <span class="emoji-icon">📬</span>
                     </a>
                 </li>
+
+
                 <li class="floating-contacts__item">
                     <a target="_blank"
                        href="https://api.whatsapp.com/send?phone=<?php echo $_smarty_tpl->getValue('mainPage')['tel'];?>

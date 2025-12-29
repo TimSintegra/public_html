@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-11-19 10:58:24
+/* Smarty version 5.4.3, created on 2025-12-29 22:40:31
   from 'file:/opt/lampp/htdocs/public_html/templates/default/scripts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_691d94c0906771_60537396',
+  'unifunc' => 'content_6952f54ff1acd7_36631774',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28509e18307a3ba842c3805a9b58e14a4b36d94c' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/scripts.tpl',
-      1 => 1763546252,
+      1 => 1767044404,
       2 => 'file',
     ),
   ),
@@ -20,53 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_691d94c0906771_60537396 (\Smarty\Template $_smarty_tpl) {
+function content_6952f54ff1acd7_36631774 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/eff.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery-3.1.1.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery.spincrement.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery.sticky.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/flexmenu.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/materialize.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/owl.carousel.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery.fancybox.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery.nicescroll.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/jquery.liTextLength.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
-/assets/js/mmenu.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /assets/js/my.js"><?php echo '</script'; ?>
 > 

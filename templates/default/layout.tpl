@@ -6,20 +6,26 @@
 <div class="page">
 
     <div class="page__header">
-        <div class="headerm"><a href="#menu"><span></span></a></div>
-
         <div class="header">
             <div class="f sb ac content-wrapper">
                 <a href="{$MAIN_URL}/" class="logo">
                     <img src="{$TPL_URL}/assets/images/new_sintegra_logo.png"/>
                 </a>
+
                 {include file="$TPL_PATH/menu.tpl"}
+
+                <div class="headerm">
+                    <a href="#menu"><span></span></a>
+                </div>
+
                 <a href="tel:{$mainPage.tel}" class="tela">
                     <i class="fas fa-phone-alt"></i><span>{$mainPage.tel}</span>
                 </a>
             </div>
         </div>
     </div>
+
+
 
     <main class="page__content">
 
@@ -31,10 +37,16 @@
                     </a>
                 </li>
                 <li class="floating-contacts__item">
-                    <a data-fancybox="bell2" data-src="#bell2" href="javascript:;" class="floating-contacts__link" title="Написать">
-                        <span class="emoji-icon">✉️</span>
+                    <a data-fancybox="bell2"
+                    data-src="#bell2"
+                    href="javascript:;"
+                    class="floating-contacts__link floating-contacts__link--mail"
+                    title="Написать">
+                        <span class="emoji-icon">📬</span>
                     </a>
                 </li>
+
+
                 <li class="floating-contacts__item">
                     <a target="_blank"
                        href="https://api.whatsapp.com/send?phone={$mainPage.tel}&text=Здравствуйте, у меня возник вопрос. Могу получить консультацию?"
