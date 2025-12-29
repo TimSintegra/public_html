@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-29 23:13:52
+/* Smarty version 5.4.3, created on 2025-12-29 23:30:04
   from 'file:/opt/lampp/htdocs/public_html/templates/default/layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_6952fd20dc0dd7_14043468',
+  'unifunc' => 'content_695300ec725347_00255110',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bdd64f3de665a8c4bb7e6e7385d270323892682' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/layout.tpl',
-      1 => 1767046428,
+      1 => 1767047401,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6952fd20dc0dd7_14043468 (\Smarty\Template $_smarty_tpl) {
+function content_695300ec725347_00255110 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><!DOCTYPE html>
 <html>
@@ -69,11 +69,11 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
                 </li>
                 <li class="floating-contacts__item">
                     <a data-fancybox="bell2"
-                    data-src="#bell2"
-                    href="javascript:;"
-                    class="floating-contacts__link floating-contacts__link--mail"
-                    title="Написать">
-                        <span class="emoji-icon">📬</span>
+                        data-src="#bell2"
+                        href="javascript:;"
+                        class="floating-contacts__link floating-contacts__link--mail"
+                        title="Написать">
+                            <span class="emoji-icon">📬</span>
                     </a>
                 </li>
 
@@ -95,22 +95,36 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
             <div class="callback-modal">
                 <h2>Перезвонить Вам?</h2>
                 <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
-                <form id="callbackForm">
+                <form id="callbackForm" method="post">
                     <div class="form-group">
-                        <input name="uname" id="uname" type="text" placeholder="Ваше Имя" required>
+                        <input name="uname" id="uname" type="text"
+                            placeholder="Ваше Имя"
+                            required minlength="2" maxlength="50">
                     </div>
+
                     <div class="form-group">
-                        <input name="tel" id="tel" type="tel" placeholder="Телефон" required>
+                        <input name="tel" id="tel" type="tel"
+                            placeholder="Телефон"
+                            required>
                     </div>
+
                     <div class="form-group">
-                        <input name="email" id="email" type="email" placeholder="E-mail">
+                        <input name="email" id="email" type="email"
+                            placeholder="E-mail">
                     </div>
+
                     <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Текст сообщения" rows="5"></textarea>
+                        <textarea name="message" id="message"
+                                placeholder="Текст сообщения"
+                                rows="5"
+                                minlength="5"
+                                maxlength="1000"></textarea>
                     </div>
+
                     <div class="form-submit">
                         <button type="submit" class="submit-btn">Отправить заявку</button>
                     </div>
+
                     <div id="formMessage" class="form-message"></div>
                 </form>
             </div>

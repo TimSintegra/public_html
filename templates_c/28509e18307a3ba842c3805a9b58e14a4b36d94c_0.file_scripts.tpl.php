@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-29 22:40:31
+/* Smarty version 5.4.3, created on 2025-12-29 23:18:11
   from 'file:/opt/lampp/htdocs/public_html/templates/default/scripts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_6952f54ff1acd7_36631774',
+  'unifunc' => 'content_6952fe230687f0_79368861',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28509e18307a3ba842c3805a9b58e14a4b36d94c' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/scripts.tpl',
-      1 => 1767044404,
+      1 => 1767046601,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,14 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6952f54ff1acd7_36631774 (\Smarty\Template $_smarty_tpl) {
+function content_6952fe230687f0_79368861 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
-echo '<script'; ?>
+?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+<?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
 /assets/js/my.js"><?php echo '</script'; ?>
 > 

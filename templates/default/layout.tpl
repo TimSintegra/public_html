@@ -38,11 +38,11 @@
                 </li>
                 <li class="floating-contacts__item">
                     <a data-fancybox="bell2"
-                    data-src="#bell2"
-                    href="javascript:;"
-                    class="floating-contacts__link floating-contacts__link--mail"
-                    title="Написать">
-                        <span class="emoji-icon">📬</span>
+                        data-src="#bell2"
+                        href="javascript:;"
+                        class="floating-contacts__link floating-contacts__link--mail"
+                        title="Написать">
+                            <span class="emoji-icon">📬</span>
                     </a>
                 </li>
 
@@ -63,22 +63,36 @@
             <div class="callback-modal">
                 <h2>Перезвонить Вам?</h2>
                 <p>Оставьте Ваши данные и мы Вам перезвоним!</p>
-                <form id="callbackForm">
+                <form id="callbackForm" method="post">
                     <div class="form-group">
-                        <input name="uname" id="uname" type="text" placeholder="Ваше Имя" required>
+                        <input name="uname" id="uname" type="text"
+                            placeholder="Ваше Имя"
+                            required minlength="2" maxlength="50">
                     </div>
+
                     <div class="form-group">
-                        <input name="tel" id="tel" type="tel" placeholder="Телефон" required>
+                        <input name="tel" id="tel" type="tel"
+                            placeholder="Телефон"
+                            required>
                     </div>
+
                     <div class="form-group">
-                        <input name="email" id="email" type="email" placeholder="E-mail">
+                        <input name="email" id="email" type="email"
+                            placeholder="E-mail">
                     </div>
+
                     <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Текст сообщения" rows="5"></textarea>
+                        <textarea name="message" id="message"
+                                placeholder="Текст сообщения"
+                                rows="5"
+                                minlength="5"
+                                maxlength="1000"></textarea>
                     </div>
+
                     <div class="form-submit">
                         <button type="submit" class="submit-btn">Отправить заявку</button>
                     </div>
+
                     <div id="formMessage" class="form-message"></div>
                 </form>
             </div>
