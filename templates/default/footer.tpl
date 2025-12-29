@@ -7,13 +7,15 @@
                 <li><a href="{$mainMenu.$m.url}" {if $mainMenu.$m.active == 1}class="active"{/if}>{$mainMenu.$m.title}</a></li>
             {/foreach}
         </ul>
-        <div class="fadd">
-            <span>Адрес</span>
-            <i>{$mainPage.address}</i>
-        </div>
-        <div class="ftel">
-            <span>{$mainPage.tel}</span>
-            <i>{$mainPage.rejim}</i>
+        <div class="contacts-block">
+            <div class="fadd">
+                <span>Адрес</span>
+                <i>{$mainPage.address}</i>
+            </div>
+            <div class="ftel">
+                <span>{$mainPage.tel}</span>
+                <i>{$mainPage.rejim}</i>
+            </div>
         </div>
     </div>
     <div class="f sb content-wrapper">

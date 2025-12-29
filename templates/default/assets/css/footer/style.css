@@ -1,119 +1,141 @@
-/* Основной футер (теперь с белым фоном) */
+/* === ОБЩИЙ ФУТЕР === */
 .footer {
-    background-color: #ffffff; /* Белый фон, как просил */
-    color: #333; /* Тёмный текст для читаемости */
+    background-color: #ffffff;
+    color: #333;
     padding: 40px 0 20px;
-    font-size: 0.9em;
-    border-top: 1px solid #e0e0e0; /* Лёгкая граница сверху для отделения от контента */
+    font-size: 0.95em;
+    border-top: 1px solid #e0e0e0;
 }
 
-/* Flex-контейнеры */
-.f.sb.content-wrapper {
+/* Верхняя часть футера */
+.footer .f.sb.content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px; /* как в header */
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Логотип (цветной, но если нужно монохромный — добавь filter: grayscale(100%) invert(1); для белого) */
-.logo img {
+/* ЛОГОТИП В ФУТЕРЕ */
+.footer .logo img {
     height: 80px;
     width: auto;
     transition: transform 0.3s ease;
 }
 
-.logo:hover img {
+.footer .logo:hover img {
     transform: scale(1.05);
 }
 
-/* Навигация в футере */
-.navfoot {
+/* МЕНЮ В ФУТЕРЕ (2 колонки) */
+.footer .navfoot {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 8px;
+    max-width: 420px;
 }
 
-.navfoot li a {
-    color: #666; /* Серый для ссылок на белом фоне */
+.footer .navfoot li {
+    width: 30%;
+}
+
+.footer .navfoot li a {
+    display: inline-block;
+    color: #666;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 0.95em;
 }
 
-.navfoot li a:hover,
-.navfoot li a.active {
-    color: #0066cc; /* Синий акцент при hover/active */
+.footer .navfoot li a:hover,
+.footer .navfoot li a.active {
+    color: #0066cc;
     font-weight: bold;
 }
 
-/* Адрес */
-.fadd {
-    text-align: right;
+/* АДРЕС И ТЕЛЕФОН */
+.footer .contacts-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.fadd span {
+.footer .fadd,
+.footer .ftel {
+    position: relative;
+    padding-left: 30px;
+    font-size: 0.9em;
+}
+
+.footer .fadd span {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333; /* Тёмный для заголовка */
+    color: #333;
 }
 
-.fadd i {
+.footer .fadd i {
     font-style: normal;
-    color: #666; /* Серый для текста */
+    color: #666;
 }
 
-/* Телефон */
-.fadd, .ftel {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	padding-left:30px;
-}
-.fadd:before, .ftel:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top:0;
-	width: 25px;
-	height: 25px;
-	display: block;
-	color: #e23c40;
-	font-size: 18px;
-	font-family: "Font Awesome 5 Pro";
-	font-weight: 900;
-}
-.fadd:before {
-	content:"\f3c5";}
-.ftel:before {
-	content:"\f879";
-}
-.ftel span {
-	font-size: 16px;
-	font-weight: 700;
-	color: #284693;
-	font-family: 'Montserrat', sans-serif;
-}
-.ftel i {
-	font-size: 14px;
-	line-height: 25px;
-	font-weight: 600;
-	font-style: normal;
-	color: #1b202e;
+.footer .fadd:before,
+.footer .ftel:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    display: block;
+    color: #e23c40;
+    font-size: 18px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
 }
 
+.footer .fadd:before {
+    content: "\f3c5";
+}
 
-/* Нижняя часть */
+.footer .ftel:before {
+    content: "\f879";
+}
+
+.footer .ftel span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #284693;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer .ftel i {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600;
+    font-style: normal;
+    color: #1b202e;
+}
+
+/* НИЖНЯЯ ПОЛОСА */
 .footer .f.sb.content-wrapper:last-child {
     margin-top: 20px;
-    border-top: 1px solid #e0e0e0; /* Светлая граница на белом */
+    border-top: 1px solid #e0e0e0;
     padding-top: 20px;
     font-size: 0.85em;
     color: #666;
+    align-items: center;
+}
+
+.footer .f.sb.content-wrapper:last-child span {
+    white-space: nowrap;
 }
 
 .footer .f.sb.content-wrapper:last-child a {
@@ -125,7 +147,7 @@
     color: #004080;
 }
 
-/* Модальное окно (оставил без изменений, но адаптировал цвета под светлую тему) */
+/* МОДАЛКА ОБРАТНОГО ЗВОНКА */
 #bell2 {
     display: none;
     background-color: #fff;
@@ -188,22 +210,37 @@
     background-color: #004080;
 }
 
-/* Responsive */
+/* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 768px) {
-    .f.sb.content-wrapper {
+
+    .footer .f.sb.content-wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 20px;
         gap: 20px;
     }
 
-    .navfoot {
-        flex-direction: column;
-        gap: 10px;
+    /* меню футера: 2 колонки на телефонах */
+    .footer .navfoot {
+        max-width: 320px;      /* чтобы смотрелось компактно */
+        justify-content: center;
     }
 
-    .fadd, .ftel {
-        text-align: center;
+    .footer .navfoot li {
+        width: 40%;            /* две колонки */
+        text-align: left;
+    }
+
+    .footer .fadd,
+    .footer .ftel {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .footer .fadd:before,
+    .footer .ftel:before {
+        display: none;
     }
 
     #bell2 {

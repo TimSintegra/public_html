@@ -125,6 +125,10 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
+    .company-section {
+        padding: 0;
+    }
+
     .company-content {
         flex-direction: column;
         gap: 30px;
@@ -254,33 +258,7 @@ body {
         max-width: 92vw;
     }
 }
-@media (max-width: 600px) {
-    .timeline {
-        gap: 22px;
-    }
-    .milestone {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 7px;
-    }
-    .year {
-        margin: 0 0 8px 0;
-        align-self: flex-start;
-        font-size: 1em;
-        height: 43px;
-        min-width: 43px;
-        max-width: 43px;
-    }
-    .description {
-        padding: 13px 8px;
-        font-size: 0.97em;
-        border-left-width: 3px;
-        border-radius: 10px;
-    }
-    .section-title {
-        font-size: 1.5rem;
-    }
-}
+
 
 /* city-stats-section */
 /* Секция с географией и статистикой */
