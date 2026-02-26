@@ -99,6 +99,7 @@ body {
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .services-items li::before {
@@ -121,6 +122,24 @@ body {
     transform: translateY(-8px) scale(1.02);
     border-color: #019ae9;
     box-shadow: 0 20px 40px #61c2fd40;
+}
+
+/* Стили для ссылки внутри li */
+.services-items li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    position: relative;
+    z-index: 2;
+}
+
+.services-items li a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Адаптивность */

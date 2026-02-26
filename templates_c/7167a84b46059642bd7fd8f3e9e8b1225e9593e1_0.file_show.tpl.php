@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-11 16:42:52
+/* Smarty version 5.4.3, created on 2026-02-20 16:46:15
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_693ae67cb80e57_23185331',
+  'unifunc' => 'content_699881c7de4ee3_34015972',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7167a84b46059642bd7fd8f3e9e8b1225e9593e1' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl',
-      1 => 1765467481,
+      1 => 1771602323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_693ae67cb80e57_23185331 (\Smarty\Template $_smarty_tpl) {
+function content_699881c7de4ee3_34015972 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/index';
 ?><section class="company-section">
     <div class="container">
@@ -48,8 +48,11 @@ $foreach0DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('service')->value) {
 $foreach0DoElse = false;
 ?>
-                    <li><?php echo $_smarty_tpl->getValue('service');?>
-</li>
+                    <li>
+                        <a href="<?php echo $_smarty_tpl->getValue('service')['url'];?>
+"><?php echo $_smarty_tpl->getValue('service')['title'];?>
+</a>
+                    </li>
                 <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>

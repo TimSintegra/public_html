@@ -16,7 +16,9 @@
         <div class="services-list">
             <ul class="services-items">
                 {foreach $services_list as $service}
-                    <li>{$service}</li>
+                    <li>
+                        <a href="{$service.url}">{$service.title}</a>
+                    </li>
                 {/foreach}
             </ul>
         </div>
