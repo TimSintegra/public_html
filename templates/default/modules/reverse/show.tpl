@@ -46,6 +46,12 @@
                             Подготовка моделей для 3D/5D‑печати и механообработки
                         </span>
                     </a>
+
+                    <a href="{$MAIN_URL}/equipment.html" class="reverse-engineering__item">
+                        <span class="reverse-engineering__item-title">
+                            Оборудование
+                        </span>
+                    </a>
                 </div>
 
                 <p class="reverse-engineering__text">

@@ -65,6 +65,12 @@
                 color 0.2s ease;
 }
 
+.reverse-engineering__item:nth-child(odd):last-child {
+    grid-column: 1 / -1;
+    justify-content: center;
+    text-align: center;
+}
+
 .reverse-engineering__item-title {
     font-size: 1.08rem;
     line-height: 1.5;
@@ -107,6 +113,12 @@
 
     .reverse-engineering__item-title {
         font-size: 1rem;
+    }
+
+    .reverse-engineering__item:nth-child(odd):last-child {
+        grid-column: auto; 
+        justify-content: flex-start;
+        text-align: left;
     }
 }
 
