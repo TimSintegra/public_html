@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2026-02-20 16:46:15
+/* Smarty version 5.4.3, created on 2026-02-28 12:31:57
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_699881c7de4ee3_34015972',
+  'unifunc' => 'content_69a2d22d0a0a01_13281796',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7167a84b46059642bd7fd8f3e9e8b1225e9593e1' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/index/show.tpl',
-      1 => 1771602323,
+      1 => 1772278314,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_699881c7de4ee3_34015972 (\Smarty\Template $_smarty_tpl) {
+function content_69a2d22d0a0a01_13281796 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/index';
 ?><section class="company-section">
     <div class="container">
@@ -61,6 +61,8 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
     </div>
 </section>
 
+<?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/modules/maindirections/show.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
 
 <section class="company-way">
     <div class="container">

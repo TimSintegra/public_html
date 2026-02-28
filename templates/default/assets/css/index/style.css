@@ -212,6 +212,127 @@ body {
     z-index: 0;
 }
 
+/* maindirections */
+.directions-section {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.directions-header h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #003366;
+    position: relative;
+}
+
+.directions-header h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #e31e24;
+    margin: 8px auto 0;
+}
+
+.directions-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.directions-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background: #e9f4ff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.directions-icon {
+    flex: 0 0 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.directions-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #003366;
+}
+
+/* ======== АДАПТИВ ======== */
+
+/* Планшеты: уменьшаем шрифт заголовка и отступы */
+@media (max-width: 992px) {
+    .directions-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .directions-header h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .directions-item {
+        padding: 12px 14px;
+    }
+
+    .directions-text {
+        font-size: 13px;
+    }
+}
+
+/* Мобильные: одна колонка, элементы повыше, чтобы легче тапать */
+@media (max-width: 768px) {
+    .directions-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .directions-item {
+        padding: 12px 12px;
+    }
+
+    .directions-icon {
+        flex: 0 0 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .directions-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    .directions-section {
+        padding: 24px 0;
+    }
+
+    .directions-header h2 {
+        font-size: 18px;
+    }
+
+    .directions-item {
+        gap: 10px;
+    }
+
+    .directions-text {
+        font-size: 12px;
+    }
+}
+
+
 /* Milestone */
 .milestone {
     display: flex;

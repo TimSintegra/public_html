@@ -25,6 +25,7 @@
     </div>
 </section>
 
+{include file="$TPL_PATH/modules/maindirections/show.tpl"}
 
 <section class="company-way">
     <div class="container">

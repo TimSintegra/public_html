@@ -44,6 +44,50 @@ $services_list = array(
 
 $smarty->assign('services_list', $services_list);
 
+$directionsData = array(
+    'title' => 'Основные направления деятельности',
+    'items' => array(
+        array(
+            'icon' => '🔒',
+            'text' => 'Системы контроля и управления доступом, охраны периметра'
+        ),
+        array(
+            'icon' => '⚙️',
+            'text' => 'Системы автоматизации КИПиА и АСУТП'
+        ),
+        array(
+            'icon' => '🌡️',
+            'text' => 'Системы автоматизации отопления и вентиляции'
+        ),
+        array(
+            'icon' => '🔧',
+            'text' => 'Электромонтажные работы'
+        ),
+        array(
+            'icon' => '🚆',
+            'text' => 'Система АСДУ ЭМС'
+        ),
+        array(
+            'icon' => '📢',
+            'text' => 'Охранная сигнализация и др.'
+        ),
+        array(
+            'icon' => '📡',
+            'text' => 'Системы связи'
+        ),
+        array(
+            'icon' => '🔥',
+            'text' => 'Пожарная сигнализация и автоматизация пожаротушения'
+        ),
+        array(
+            'icon' => '🎥',
+            'text' => 'Системы видеонаблюдения'
+        ),
+    ),
+);
+
+$smarty->assign('directionsData', $directionsData);
+
 $smarty->assign(
     'header_way', 
     'Путь роста и укрепления экспертизы'
