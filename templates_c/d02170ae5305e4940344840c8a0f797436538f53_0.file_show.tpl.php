@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-11 16:42:52
+/* Smarty version 5.4.3, created on 2026-03-01 04:02:01
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_693ae67cb96744_14236423',
+  'unifunc' => 'content_69a3ac29ae6205_23024673',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd02170ae5305e4940344840c8a0f797436538f53' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/contacts/show.tpl',
-      1 => 1765467413,
+      1 => 1772334059,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_693ae67cb96744_14236423 (\Smarty\Template $_smarty_tpl) {
+function content_69a3ac29ae6205_23024673 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/contacts';
 ?><section class="contacts-section">
     <div class="container">
@@ -34,29 +34,33 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/
             <div class="offices-block">
                 <?php
 $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('contactsData')['offices'], 'office');
-$foreach9DoElse = true;
+$foreach0DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('office')->value) {
-$foreach9DoElse = false;
+$foreach0DoElse = false;
 ?>
-                    <div class="office-card">
-                        <?php if ($_smarty_tpl->getValue('office')['icon']) {?>
-                            <div class="office-icon"><?php echo $_smarty_tpl->getValue('office')['icon'];?>
+                    <!-- 🔗 Карточка теперь ссылка -->
+                    <a href="<?php echo $_smarty_tpl->getValue('office')['map_url'];?>
+" target="_blank" rel="noopener noreferrer" class="office-card-link">
+                        <div class="office-card">
+                            <?php if ($_smarty_tpl->getValue('office')['icon']) {?>
+                                <div class="office-icon"><?php echo $_smarty_tpl->getValue('office')['icon'];?>
 </div>
-                        <?php }?>
-                        <h2><?php echo $_smarty_tpl->getValue('office')['title'];?>
+                            <?php }?>
+                            <h2><?php echo $_smarty_tpl->getValue('office')['title'];?>
 </h2>
-                        <p class="country"><?php echo $_smarty_tpl->getValue('office')['country'];?>
+                            <p class="country"><?php echo $_smarty_tpl->getValue('office')['country'];?>
 </p>
-                        <?php if ($_smarty_tpl->getValue('office')['region']) {?>
-                            <p class="region"><?php echo $_smarty_tpl->getValue('office')['region'];?>
+                            <?php if ($_smarty_tpl->getValue('office')['region']) {?>
+                                <p class="region"><?php echo $_smarty_tpl->getValue('office')['region'];?>
 </p>
-                        <?php }?>
-                        <p class="address"><?php echo $_smarty_tpl->getValue('office')['address'];?>
+                            <?php }?>
+                            <p class="address"><?php echo $_smarty_tpl->getValue('office')['address'];?>
 </p>
-                        <p class="email">Email: <a href="mailto:<?php echo $_smarty_tpl->getValue('office')['email'];?>
-"><?php echo $_smarty_tpl->getValue('office')['email'];?>
+                            <p class="email">Email: <a href="mailto:<?php echo $_smarty_tpl->getValue('office')['email'];?>
+" onclick="event.stopPropagation()"><?php echo $_smarty_tpl->getValue('office')['email'];?>
 </a></p>
-                    </div>
+                        </div>
+                    </a>
                 <?php
 }
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>

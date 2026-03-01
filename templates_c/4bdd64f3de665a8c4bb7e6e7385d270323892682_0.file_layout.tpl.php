@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-29 23:30:04
+/* Smarty version 5.4.3, created on 2026-03-01 04:25:27
   from 'file:/opt/lampp/htdocs/public_html/templates/default/layout.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_695300ec725347_00255110',
+  'unifunc' => 'content_69a3b1a7cc1742_80950437',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4bdd64f3de665a8c4bb7e6e7385d270323892682' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/layout.tpl',
-      1 => 1767047401,
+      1 => 1772335056,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_695300ec725347_00255110 (\Smarty\Template $_smarty_tpl) {
+function content_69a3b1a7cc1742_80950437 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><!DOCTYPE html>
 <html>
@@ -142,6 +142,34 @@ $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
         <?php $_smarty_tpl->renderSubTemplate(((string)$_smarty_tpl->getValue('TPL_PATH'))."/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
     </footer>
+
+    <?php if ($_smarty_tpl->getValue('MODULE_PATH') == 'index' && $_smarty_tpl->getValue('recruitmentBannerShow')) {?>
+    <div class="recruitment-banner" id="recruitmentBanner">
+        <div class="recruitment-banner__inner">
+            <p class="recruitment-banner__text"><?php echo $_smarty_tpl->getValue('recruitmentBannerText');?>
+</p>
+            <a href="<?php echo $_smarty_tpl->getValue('recruitmentBannerDocUrl');?>
+" target="_blank" rel="noopener" class="recruitment-banner__link">Требования к кандидату</a>
+            <button type="button" class="recruitment-banner__close" id="recruitmentBannerClose" aria-label="Закрыть">×</button>
+        </div>
+    </div>
+    <?php echo '<script'; ?>
+>
+    (function() {
+        var banner = document.getElementById('recruitmentBanner');
+        var btn = document.getElementById('recruitmentBannerClose');
+        if (banner && btn) {
+            var key = 'recruitmentBannerClosed';
+            if (sessionStorage.getItem(key)) banner.classList.add('recruitment-banner--hidden');
+            btn.addEventListener('click', function() {
+                banner.classList.add('recruitment-banner--hidden');
+                sessionStorage.setItem(key, '1');
+            });
+        }
+    })();
+    <?php echo '</script'; ?>
+>
+    <?php }?>
 
 </div>
 

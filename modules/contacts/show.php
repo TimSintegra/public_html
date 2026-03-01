@@ -1,4 +1,3 @@
-
 <?php
 
 $contactsData = array(
@@ -15,7 +14,8 @@ $contactsData = array(
             'country' => 'Российская Федерация',
             'region' => '',
             'address' => 'г. Москва, ул. Матросская Тишина, 23с1, помещение XXVI, ком.1',
-            'email' => 'office@s-nk.su'
+            'email' => 'office@s-nk.su',
+            'map_url' => 'https://yandex.ru/maps/?text=' . urlencode('г. Москва, ул. Матросская Тишина, 23с1, помещение XXVI, ком.1')
         ),
         array(
             'icon' => '🏭',
@@ -23,11 +23,11 @@ $contactsData = array(
             'country' => 'Российская Федерация',
             'region' => 'Республика Татарстан',
             'address' => 'г. Нижнекамск, БСИ, ул. Заводская 3 В',
-            'email' => 'info@s-nk.su'
+            'email' => 'info@s-nk.su',
+            'map_url' => 'https://yandex.ru/maps/?text=' . urlencode('г. Нижнекамск, БСИ, ул. Заводская 3 В')
         )
     )
 );
 
 $smarty->assign('contactsData', $contactsData);
-
 ?>
