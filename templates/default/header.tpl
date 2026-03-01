@@ -8,6 +8,11 @@
     <meta name="description" content="{$SEO.description}"/>
     <link href="{$TPL_URL}/assets/css/header/style.css" rel="stylesheet">
     <link href="{$TPL_URL}/assets/css/{$MODULE_PATH}/style.css" rel="stylesheet">
+    {if $MODULE_PATH == 'index'}
+    {foreach $INDEX_SECTION_MODULES as $sect}
+    <link href="{$TPL_URL}/assets/css/{$sect}/style.css" rel="stylesheet">
+    {/foreach}
+    {/if}
     <link href="{$TPL_URL}/assets/css/footer/style.css" rel="stylesheet">
     <link href="{$TPL_URL}/assets/css/icons/style.css" rel="stylesheet">
     <link href="{$TPL_URL}/assets/css/layout/style.css" rel="stylesheet">

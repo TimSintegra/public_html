@@ -1,4 +1,33 @@
-/* Секция сертификатов */
+/* Секция сертификатов — единственный источник стилей. На главной подключается через INDEX_SECTION_MODULES. */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #1261b3;
+    font-weight: 800;
+    margin-bottom: 48px;
+}
+
+.subsection-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #166bb6;
+    margin-bottom: 24px;
+}
+
+/* Сетка сертификатов */
+.certificates-section {
+    padding: 80px 0;
+}
+
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -24,10 +53,9 @@
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain; /* Показывает весь документ целиком */
+    object-fit: contain;
 }
 
-/* Для портретной ориентации (328x506 и 402x622) */
 .certificate-item--portrait-small {
     aspect-ratio: 328/506;
 }
@@ -36,30 +64,40 @@
     aspect-ratio: 402/622;
 }
 
-/* Для ландшафтной ориентации (624x402) */
+.certificate-item--wide,
 .certificate-item--landscape {
     aspect-ratio: 624/402;
-    grid-column: span 2; /* Широкое фото на 2 колонки */
+    grid-column: span 2;
 }
 
-/* Адаптивность */
+.certificate-item--large {
+    aspect-ratio: 402/622;
+}
+
+.certificate-item--small {
+    aspect-ratio: 328/506;
+}
+
 @media (max-width: 992px) {
     .certificates-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    .certificate-item--wide,
     .certificate-item--landscape {
         grid-column: span 2;
     }
 }
 
 @media (max-width: 768px) {
+    .certificates-section {
+        padding: 60px 0;
+    }
     .certificates-grid {
         grid-template-columns: 1fr;
+        margin-top: 24px;
     }
-    
+    .certificate-item--wide,
     .certificate-item--landscape {
         grid-column: span 1;
     }
 }
-

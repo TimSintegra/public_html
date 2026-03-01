@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-12-29 23:18:11
+/* Smarty version 5.4.3, created on 2026-03-01 03:32:00
   from 'file:/opt/lampp/htdocs/public_html/templates/default/scripts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_6952fe230687f0_79368861',
+  'unifunc' => 'content_69a3a5203ce838_60177493',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '28509e18307a3ba842c3805a9b58e14a4b36d94c' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/scripts.tpl',
-      1 => 1767046601,
+      1 => 1772332270,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6952fe230687f0_79368861 (\Smarty\Template $_smarty_tpl) {
+function content_69a3a5203ce838_60177493 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default';
 ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
 <?php echo '<script'; ?>
@@ -80,6 +80,27 @@ echo '<script'; ?>
 > 
 
 
-<?php }
+<?php }?>
+
+<?php if ($_smarty_tpl->getValue('MODULE_PATH') == 'index') {?>
+  <?php
+$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('INDEX_SECTION_MODULES'), 'sect');
+$foreach1DoElse = true;
+foreach ($_from ?? [] as $_smarty_tpl->getVariable('sect')->value) {
+$foreach1DoElse = false;
+?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+/assets/js/<?php echo $_smarty_tpl->getValue('sect');?>
+/script.js"><?php echo '</script'; ?>
+>
+  <?php
 }
+$_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);
+}
+echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->getValue('TPL_URL');?>
+/assets/js/<?php echo $_smarty_tpl->getValue('MODULE_PATH');?>
+/script.js"><?php echo '</script'; ?>
+><?php }
 }

@@ -45,3 +45,10 @@
 
 {/literal}
 {/if}
+
+{if $MODULE_PATH == 'index'}
+  {foreach $INDEX_SECTION_MODULES as $sect}
+    <script src="{$TPL_URL}/assets/js/{$sect}/script.js"></script>
+  {/foreach}
+{/if}
+<script src="{$TPL_URL}/assets/js/{$MODULE_PATH}/script.js"></script>

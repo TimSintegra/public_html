@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2026-02-26 22:50:15
+/* Smarty version 5.4.3, created on 2026-03-01 03:32:00
   from 'file:/opt/lampp/htdocs/public_html/templates/default/modules/certificates/show.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_69a0c017e8f639_49501626',
+  'unifunc' => 'content_69a3a5203db3c6_69704280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '59943a4f3cc8efb3bfa9dac983d732be87457c5e' => 
     array (
       0 => '/opt/lampp/htdocs/public_html/templates/default/modules/certificates/show.tpl',
-      1 => 1772142590,
+      1 => 1772330752,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a0c017e8f639_49501626 (\Smarty\Template $_smarty_tpl) {
+function content_69a3a5203db3c6_69704280 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/opt/lampp/htdocs/public_html/templates/default/modules/certificates';
 ?><section class="certificates-section">
     <div class="container">

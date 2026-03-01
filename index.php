@@ -106,6 +106,10 @@ echo '</pre>';
 $SEO = $exe->getSEO($sec, $act, $id);
 $smarty->assign('SEO', $SEO);
 
+// Секции, которые подключаются на главной (их CSS/JS/данные живут в своих модулях, на index только подключаем)
+$indexSectionModules = array('certificates', 'partners', 'projects', 'contacts');
+$smarty->assign('INDEX_SECTION_MODULES', $indexSectionModules);
+
 if (!isset($_POST['q'])) {
     $smarty->assign('query', '');
 }
