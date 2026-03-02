@@ -11,7 +11,7 @@
 class Forms
 {
 
-    function _selectForm ($select_name, $select_db, $select_value, $select_title, $select_none=1, $select_none_title='Выберите', $selected, $select_where='', $select_order='') {
+    function _selectForm ($select_name, $select_db, $select_value, $select_title, $selected, $select_none=1, $select_none_title='Выберите', $select_where='', $select_order='') {
         global $db;
         $_selectform = '<select id="' . $select_name . '" name="' . $select_name . '">';
         if ($select_none !=0)
