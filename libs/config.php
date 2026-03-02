@@ -8,8 +8,8 @@
  * @version 1.9
  *
  */
-define('_HTTP_URL', 'http://localhost:8080');
-define('_SERVER_ROOT', '/opt/lampp/htdocs/public_html');
+define('_HTTP_URL', 'http://sintegra-nk.ru');
+define('_SERVER_ROOT', '/var/www/s-nk.su/public_html/');
 define('_ADMIN_PATH', _SERVER_ROOT . '/admin');
 define('_ADMIN_URL', '/admin');
 define('_MAIN_PATH', _SERVER_ROOT);
