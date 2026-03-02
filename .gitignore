@@ -1,2 +1,4 @@
 templates_c/*
 admin/templates_c/*
+libs/config.local.php
+libs/config.server.php
