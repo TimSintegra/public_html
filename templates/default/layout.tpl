@@ -98,6 +98,30 @@
             </div>
         </div>
 
+        {if $MODULE_PATH == 'index' && $recruitmentBannerShow}
+        <div class="recruitment-banner" id="recruitmentBanner">
+            <div class="recruitment-banner__inner">
+                <p class="recruitment-banner__text">{$recruitmentBannerText}</p>
+                <a href="{$recruitmentBannerDocUrl}" target="_blank" rel="noopener" class="recruitment-banner__link">Требования к кандидату</a>
+                <button type="button" class="recruitment-banner__close-btn" id="recruitmentBannerClose">Закрыть</button>
+            </div>
+        </div>
+        <script>
+        (function() {
+            var banner = document.getElementById('recruitmentBanner');
+            var btn = document.getElementById('recruitmentBannerClose');
+            if (banner && btn) {
+                var key = 'recruitmentBannerClosed';
+                if (sessionStorage.getItem(key)) banner.classList.add('recruitment-banner--hidden');
+                btn.addEventListener('click', function() {
+                    banner.classList.add('recruitment-banner--hidden');
+                    sessionStorage.setItem(key, '1');
+                });
+            }
+        })();
+        </script>
+        {/if}
+
         {include file="$TPL_PATH/scripts.tpl"}
 
         {include file="$TPL_PATH/modules/{$MODULE_PATH}/{$MODULE_ACT}.tpl"}
@@ -107,30 +131,6 @@
     <footer class="page__footer">
         {include file="$TPL_PATH/footer.tpl"}
     </footer>
-
-    {if $MODULE_PATH == 'index' && $recruitmentBannerShow}
-    <div class="recruitment-banner" id="recruitmentBanner">
-        <div class="recruitment-banner__inner">
-            <p class="recruitment-banner__text">{$recruitmentBannerText}</p>
-            <a href="{$recruitmentBannerDocUrl}" target="_blank" rel="noopener" class="recruitment-banner__link">Требования к кандидату</a>
-            <button type="button" class="recruitment-banner__close" id="recruitmentBannerClose" aria-label="Закрыть">×</button>
-        </div>
-    </div>
-    <script>
-    (function() {
-        var banner = document.getElementById('recruitmentBanner');
-        var btn = document.getElementById('recruitmentBannerClose');
-        if (banner && btn) {
-            var key = 'recruitmentBannerClosed';
-            if (sessionStorage.getItem(key)) banner.classList.add('recruitment-banner--hidden');
-            btn.addEventListener('click', function() {
-                banner.classList.add('recruitment-banner--hidden');
-                sessionStorage.setItem(key, '1');
-            });
-        }
-    })();
-    </script>
-    {/if}
 
 </div>
 

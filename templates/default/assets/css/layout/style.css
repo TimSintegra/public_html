@@ -249,3 +249,135 @@ body {
         gap: 12px;
     }
 }
+
+/* ========================================
+   Recruitment Banner (по центру экрана)
+   ======================================== */
+
+.recruitment-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 10000;
+
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.recruitment-banner__inner {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.recruitment-banner__text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #166bb6;
+    margin-bottom: 18px;
+}
+
+.recruitment-banner__link {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #166bb6 0%, #3aa1e4 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recruitment-banner__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 107, 182, 0.3);
+}
+
+.recruitment-banner__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.recruitment-banner__close-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 1px solid #166bb6;
+    background: #ffffff;
+    color: #166bb6;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.recruitment-banner__close-btn:hover {
+    background: #166bb6;
+    color: #ffffff;
+}
+
+.recruitment-banner--hidden {
+    display: none;
+}
+
+/* ========================================
+   Адаптив для Recruitment Banner
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .recruitment-banner__inner {
+        padding: 30px 25px;
+    }
+
+    .recruitment-banner__text {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .recruitment-banner__inner {
+        padding: 25px 20px;
+        max-width: 92%;
+    }
+
+    .recruitment-banner__buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .recruitment-banner__link,
+    .recruitment-banner__close-btn {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .recruitment-banner__text {
+        font-size: 1.05rem;
+    }
+
+}
