@@ -7,7 +7,7 @@
 // Баннер набора (как куки — внизу экрана на главной)
 $smarty->assign('recruitmentBannerShow', true);
 $smarty->assign('recruitmentBannerText', 'Идёт набор электромонтажников, мастеров ЭМР');
-$smarty->assign('recruitmentBannerDocUrl', (defined('_TPL_URL') ? _TPL_URL : '') . '/assets/docs/мастер.docx');
+$smarty->assign('recruitmentBannerDocUrl', (defined('_TPL_URL') ? _TPL_URL : '') . '/assets/docs/Набор_электромонтажников,_мастеров_ЭМР_ООО_Синтегра.docx');
 
 $smarty->assign(
     'text_about_company',
