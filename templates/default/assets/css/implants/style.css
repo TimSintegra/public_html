@@ -1,0 +1,359 @@
+/* ═══════════════════════════════════════════════════════
+   IMPLANTS MODULE — Стили для страницы медицинских имплантов
+   ═══════════════════════════════════════════════════════ */
+
+/* ─── HERO ─────────────────────────────────────────────── */
+
+.impl-hero {
+    padding: 56px 0 48px;
+    background: linear-gradient(135deg, #0d2b4a 0%, #166bb6 100%);
+    color: #ffffff;
+}
+
+.impl-hero__title {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    color: #ffffff;
+}
+
+.impl-hero__lead {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.02em;
+}
+
+.impl-hero__intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* ─── ОБЩИЕ ────────────────────────────────────────────── */
+
+.impl-section-title {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0 0 32px;
+    color: #123a5d;
+    text-align: center;
+}
+
+/* ─── МАТЕРИАЛ: 4 карточки ─────────────────────────────── */
+
+.impl-material {
+    padding: 56px 0 48px;
+    background: #ffffff;
+}
+
+.impl-material__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.impl-material__card {
+    background: #f5f9ff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-material__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-material__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.impl-material__card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-material__card-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── SLM-ПРИНТЕР ─────────────────────────────────────── */
+
+.impl-printer {
+    padding: 48px 0 56px;
+    background: #f7f9ff;
+}
+
+.impl-printer__intro {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+.impl-table-wrapper {
+    overflow-x: auto;
+}
+
+.impl-table {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 26px rgba(15, 53, 96, 0.10);
+}
+
+.impl-table thead {
+    background: linear-gradient(135deg, #166bb6, #3aa1e4);
+    color: #ffffff;
+}
+
+.impl-table th,
+.impl-table td {
+    padding: 14px 20px;
+    text-align: left;
+}
+
+.impl-table th {
+    font-weight: 600;
+    font-size: 1.02rem;
+}
+
+.impl-table tbody tr:nth-child(odd) {
+    background: #f5f9ff;
+}
+
+.impl-table tbody tr:nth-child(even) {
+    background: #ffffff;
+}
+
+.impl-table td:last-child {
+    font-weight: 500;
+    color: #123a5d;
+}
+
+/* ─── ПРОЦЕСС: 4 шага ─────────────────────────────────── */
+
+.impl-process {
+    padding: 56px 0;
+    background: #ffffff;
+}
+
+.impl-process__steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+.impl-process__step {
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.impl-process__number {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #166bb6, #3aa1e4);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 18px rgba(22, 107, 182, 0.3);
+}
+
+.impl-process__step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #123a5d;
+}
+
+.impl-process__step-text {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #45627d;
+}
+
+.impl-process__arrow {
+    font-size: 1.6rem;
+    color: #3aa1e4;
+    padding-top: 18px;
+    flex-shrink: 0;
+}
+
+/* ─── ПРЕИМУЩЕСТВА ─────────────────────────────────────── */
+
+.impl-advantages {
+    padding: 48px 0 56px;
+    background: #f7f9ff;
+}
+
+.impl-advantages__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.impl-advantages__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-advantages__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-advantages__card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-advantages__card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── ОБЛАСТИ ПРИМЕНЕНИЯ ───────────────────────────────── */
+
+.impl-directions {
+    padding: 56px 0 64px;
+    background: #ffffff;
+}
+
+.impl-directions__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.impl-directions__card {
+    background: #f5f9ff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-directions__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.16);
+}
+
+.impl-directions__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.impl-directions__card-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-directions__card-text {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── АДАПТИВ ──────────────────────────────────────────── */
+
+@media (max-width: 992px) {
+    .impl-hero__title {
+        font-size: 2.2rem;
+    }
+
+    .impl-material__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impl-process__steps {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .impl-process__arrow {
+        display: none;
+    }
+
+    .impl-advantages__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impl-directions__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .impl-hero {
+        padding: 40px 0 36px;
+    }
+
+    .impl-hero__title {
+        font-size: 1.9rem;
+    }
+
+    .impl-section-title {
+        font-size: 1.7rem;
+    }
+
+    .impl-directions__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .impl-hero {
+        padding: 32px 0 28px;
+    }
+
+    .impl-hero__title {
+        font-size: 1.65rem;
+    }
+
+    .impl-material,
+    .impl-printer,
+    .impl-process,
+    .impl-advantages,
+    .impl-directions {
+        padding: 36px 0 40px;
+    }
+}
