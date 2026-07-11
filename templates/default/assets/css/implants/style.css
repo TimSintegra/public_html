@@ -357,3 +357,289 @@
         padding: 36px 0 40px;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   НОВЫЕ БЛОКИ — Металлическая 3D-печать HBD
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── ТЕХНОЛОГИЧЕСКИЕ ВОЗМОЖНОСТИ ───────────────────── */
+
+.impl-tech {
+    padding: 56px 0;
+    background: #f7f9ff;
+}
+
+.impl-tech__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.impl-tech__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-tech__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-tech__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.impl-tech__card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-tech__card-text {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── МАТЕРИАЛЫ ──────────────────────────────────────── */
+
+.impl-materials {
+    padding: 56px 0;
+    background: #ffffff;
+}
+
+.impl-materials__intro {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+.impl-table--wide {
+    max-width: 100%;
+    font-size: 0.9rem;
+}
+
+.impl-table--wide td:first-child {
+    white-space: nowrap;
+    color: #123a5d;
+    font-weight: 600;
+}
+
+.impl-table--wide td:nth-child(2) {
+    min-width: 180px;
+}
+
+/* ─── ПРЕИМУЩЕСТВА (иконка) ──────────────────────────── */
+
+.impl-advantages__icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+/* ─── ОТРАСЛИ ────────────────────────────────────────── */
+
+.impl-industries {
+    padding: 56px 0;
+    background: #f7f9ff;
+}
+
+.impl-industries__intro {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+.impl-industries__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.impl-industries__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-industries__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-industries__icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.impl-industries__card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #123a5d;
+}
+
+.impl-industries__card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── МЕДИЦИНСКИЕ НАПРАВЛЕНИЯ ─────────────────────────── */
+
+.impl-medical {
+    padding: 56px 0;
+    background: #ffffff;
+}
+
+.impl-medical__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.impl-medical__card {
+    background: #f5f9ff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-medical__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.16);
+}
+
+.impl-medical__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.impl-medical__card-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-medical__card-text {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── КЕЙСЫ ──────────────────────────────────────────── */
+
+.impl-cases {
+    padding: 56px 0 64px;
+    background: #f7f9ff;
+}
+
+.impl-cases__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.impl-cases__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+}
+
+.impl-cases__card-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-cases__card-text {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin: 0 0 14px;
+    color: #3d5a78;
+}
+
+.impl-cases__specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.impl-cases__specs li {
+    font-size: 0.9rem;
+    color: #45627d;
+    padding: 4px 0 4px 18px;
+    position: relative;
+}
+
+.impl-cases__specs li::before {
+    content: '\25B8';
+    position: absolute;
+    left: 0;
+    color: #3aa1e4;
+}
+
+/* ─── АДАПТИВ ДЛЯ НОВЫХ БЛОКОВ ───────────────────────── */
+
+@media (max-width: 1200px) {
+    .impl-industries__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .impl-medical__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .impl-cases__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .impl-tech__grid,
+    .impl-industries__grid,
+    .impl-medical__grid {
+        grid-template-columns: 1fr;
+    }
+    .impl-cases__grid {
+        grid-template-columns: 1fr;
+    }
+    .impl-table--wide {
+        font-size: 0.82rem;
+    }
+    .impl-table--wide td:nth-child(2) {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .impl-tech,
+    .impl-materials,
+    .impl-industries,
+    .impl-medical,
+    .impl-cases {
+        padding: 36px 0 40px;
+    }
+}
