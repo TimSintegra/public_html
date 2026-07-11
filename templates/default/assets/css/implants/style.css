@@ -1,324 +1,486 @@
-/* ═══════════════════════════════════════════════════════
-   IMPLANTS MODULE — Стили для страницы медицинских имплантов
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   МЕТАЛЛИЧЕСКАЯ 3D-ПЕЧАТЬ — Стили страницы
+   ═══════════════════════════════════════════════════════════ */
 
 /* ─── HERO ─────────────────────────────────────────────── */
 
 .impl-hero {
-    padding: 56px 0 48px;
-    background: linear-gradient(135deg, #0d2b4a 0%, #166bb6 100%);
+    padding: 80px 0 72px;
+    background: linear-gradient(135deg, #0d2b4a 0%, #166bb6 60%, #1a7fd1 100%);
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
+    position: relative;
+}
+
+.impl-hero__overlay {
+    max-width: 800px;
 }
 
 .impl-hero__title {
-    font-size: 2.6rem;
-    line-height: 1.2;
-    margin: 0 0 16px;
-    color: #ffffff;
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin: 0 0 18px;
+    font-weight: 800;
 }
 
 .impl-hero__lead {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin: 0 0 12px;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0.02em;
+    margin: 0 0 14px;
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .impl-hero__intro {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     margin: 0;
     color: rgba(255, 255, 255, 0.78);
+    max-width: 720px;
 }
 
 /* ─── ОБЩИЕ ────────────────────────────────────────────── */
 
-.impl-section-title {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin: 0 0 32px;
-    color: #123a5d;
-    text-align: center;
+.impl-section {
+    padding: 64px 0;
 }
 
-/* ─── МАТЕРИАЛ: 4 карточки ─────────────────────────────── */
-
-.impl-material {
-    padding: 56px 0 48px;
+.impl-section--white {
     background: #ffffff;
 }
 
-.impl-material__grid {
+.impl-section--light {
+    background: #f5f8fc;
+}
+
+.impl-section__title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #123a5d;
+    margin: 0 0 28px;
+    line-height: 1.25;
+}
+
+.impl-section__title--center {
+    text-align: center;
+}
+
+.impl-text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #3d5a78;
+    margin: 0 0 20px;
+}
+
+.impl-lead-text {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 auto 40px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.impl-photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(11, 46, 86, 0.12);
+}
+
+/* ─── SPLIT (текст + изображение) ─────────────────────── */
+
+.impl-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.impl-split__text {
+    order: 1;
+}
+
+.impl-split__img {
+    order: 2;
+}
+
+.impl-specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+}
+
+.impl-specs li {
+    font-size: 0.96rem;
+    color: #3d5a78;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(22, 107, 182, 0.08);
+}
+
+.impl-specs li strong {
+    color: #123a5d;
+    font-weight: 600;
+}
+
+/* ─── GRID 2 ───────────────────────────────────────────── */
+
+.impl-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+/* ─── GRID 3 ───────────────────────────────────────────── */
+
+.impl-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ─── GRID 4 ───────────────────────────────────────────── */
+
+.impl-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* ─── CARD ROW (горизонтальная карточка) ──────────────── */
+
+.impl-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 22px rgba(9, 45, 91, 0.06);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(22, 107, 182, 0.16);
+}
+
+.impl-card__img-col {
+    overflow: hidden;
+}
+
+.impl-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.impl-card__text-col {
+    padding: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.impl-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-card__text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── CARD ADV (вертикальная карточка с изображением) ──── */
+
+.impl-card-adv {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 22px rgba(9, 45, 91, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.impl-card-adv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px rgba(22, 107, 182, 0.14);
+}
+
+.impl-card-adv__img-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.impl-card-adv__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.impl-card-adv:hover .impl-card-adv__img {
+    transform: scale(1.04);
+}
+
+.impl-card-adv__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 16px 20px 8px;
+    color: #123a5d;
+    line-height: 1.35;
+}
+
+.impl-card-adv__text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin: 0 20px 16px;
+    color: #3d5a78;
+    flex: 1;
+}
+
+/* ─── МАТЕРИАЛЫ ──────────────────────────────────────── */
+
+.impl-materials-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.impl-material__card {
-    background: #f5f9ff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.12);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.impl-mat-card {
+    background: #f5f8fc;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid rgba(22, 107, 182, 0.08);
 }
 
-.impl-material__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
-}
-
-.impl-material__icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-.impl-material__card-title {
-    font-size: 1.2rem;
+.impl-mat-card__name {
+    font-size: 1.08rem;
     font-weight: 700;
     margin: 0 0 10px;
     color: #123a5d;
 }
 
-.impl-material__card-text {
-    font-size: 0.98rem;
-    line-height: 1.65;
-    margin: 0;
+.impl-mat-card__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0 0 14px;
     color: #3d5a78;
 }
 
-/* ─── SLM-ПРИНТЕР ─────────────────────────────────────── */
-
-.impl-printer {
-    padding: 48px 0 56px;
-    background: #f7f9ff;
+.impl-mat-card__props {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
 }
 
-.impl-printer__intro {
-    font-size: 1.06rem;
-    line-height: 1.7;
-    color: #3d5a78;
-    margin: 0 0 32px;
-    text-align: center;
+.impl-prop {
+    font-size: 0.88rem;
+    color: #34526e;
 }
 
-.impl-table-wrapper {
-    overflow-x: auto;
-}
-
-.impl-table {
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    font-size: 1rem;
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 26px rgba(15, 53, 96, 0.10);
-}
-
-.impl-table thead {
-    background: linear-gradient(135deg, #166bb6, #3aa1e4);
-    color: #ffffff;
-}
-
-.impl-table th,
-.impl-table td {
-    padding: 14px 20px;
-    text-align: left;
-}
-
-.impl-table th {
+.impl-prop__label {
+    display: inline-block;
+    font-size: 0.78rem;
     font-weight: 600;
-    font-size: 1.02rem;
+    color: #6f8ba8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-right: 4px;
 }
 
-.impl-table tbody tr:nth-child(odd) {
-    background: #f5f9ff;
-}
+/* ─── ПРОЦЕСС (шаги) ──────────────────────────────────── */
 
-.impl-table tbody tr:nth-child(even) {
-    background: #ffffff;
-}
-
-.impl-table td:last-child {
-    font-weight: 500;
-    color: #123a5d;
-}
-
-/* ─── ПРОЦЕСС: 4 шага ─────────────────────────────────── */
-
-.impl-process {
-    padding: 56px 0;
-    background: #ffffff;
-}
-
-.impl-process__steps {
+.impl-steps {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     gap: 0;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
-.impl-process__step {
+.impl-step {
     flex: 1;
-    max-width: 240px;
     text-align: center;
     padding: 0 12px;
 }
 
-.impl-process__number {
-    width: 64px;
-    height: 64px;
+.impl-step__num {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: linear-gradient(135deg, #166bb6, #3aa1e4);
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 16px;
+    margin: 0 auto 14px;
     box-shadow: 0 6px 18px rgba(22, 107, 182, 0.3);
 }
 
-.impl-process__step-title {
-    font-size: 1.15rem;
+.impl-step__title {
+    font-size: 1.1rem;
     font-weight: 700;
     margin: 0 0 8px;
     color: #123a5d;
 }
 
-.impl-process__step-text {
-    font-size: 0.96rem;
-    line-height: 1.6;
+.impl-step__text {
+    font-size: 0.92rem;
+    line-height: 1.55;
     margin: 0;
     color: #45627d;
 }
 
-.impl-process__arrow {
-    font-size: 1.6rem;
-    color: #3aa1e4;
-    padding-top: 18px;
+.impl-step-arrow {
+    width: 40px;
+    height: 2px;
+    background: #3aa1e4;
+    margin-top: 30px;
+    position: relative;
     flex-shrink: 0;
 }
 
-/* ─── ПРЕИМУЩЕСТВА ─────────────────────────────────────── */
-
-.impl-advantages {
-    padding: 48px 0 56px;
-    background: #f7f9ff;
+.impl-step-arrow::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    border: 5px solid transparent;
+    border-left-color: #3aa1e4;
 }
 
-.impl-advantages__grid {
+/* ─── МЕДИЦИНСКИЙ РАЗДЕЛ ──────────────────────────────── */
+
+.impl-med-layout {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-.impl-advantages__card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.12);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.impl-med-grid {
+    display: grid;
+    gap: 16px;
 }
 
-.impl-advantages__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+.impl-med-card {
+    background: #f5f8fc;
+    border-radius: 12px;
+    padding: 18px 22px;
+    border-left: 4px solid #166bb6;
 }
 
-.impl-advantages__card-title {
-    font-size: 1.15rem;
+.impl-med-card__title {
+    font-size: 1rem;
     font-weight: 700;
-    margin: 0 0 10px;
+    margin: 0 0 6px;
     color: #123a5d;
 }
 
-.impl-advantages__card-text {
-    font-size: 1rem;
+.impl-med-card__text {
+    font-size: 0.9rem;
     line-height: 1.6;
     margin: 0;
     color: #3d5a78;
 }
 
-/* ─── ОБЛАСТИ ПРИМЕНЕНИЯ ───────────────────────────────── */
-
-.impl-directions {
-    padding: 56px 0 64px;
-    background: #ffffff;
+.impl-med-img {
+    position: sticky;
+    top: 100px;
 }
 
-.impl-directions__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+.impl-med-img .impl-photo {
+    width: 100%;
 }
 
-.impl-directions__card {
-    background: #f5f9ff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.10);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* ─── КЕЙСЫ ──────────────────────────────────────────── */
+
+.impl-bullets {
+    list-style: none;
+    margin: 0 20px 18px;
+    padding: 0;
 }
 
-.impl-directions__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.16);
+.impl-bullets li {
+    font-size: 0.88rem;
+    color: #45627d;
+    padding: 4px 0 4px 18px;
+    position: relative;
 }
 
-.impl-directions__icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-.impl-directions__card-title {
-    font-size: 1.12rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #123a5d;
-}
-
-.impl-directions__card-text {
-    font-size: 0.96rem;
-    line-height: 1.65;
-    margin: 0;
-    color: #3d5a78;
+.impl-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3aa1e4;
 }
 
 /* ─── АДАПТИВ ──────────────────────────────────────────── */
 
+@media (max-width: 1100px) {
+    .impl-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
+    .impl-hero {
+        padding: 52px 0 48px;
+    }
     .impl-hero__title {
         font-size: 2.2rem;
     }
-
-    .impl-material__grid {
+    .impl-section {
+        padding: 48px 0;
+    }
+    .impl-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .impl-split__img {
+        order: 1;
+    }
+    .impl-split__text {
+        order: 2;
+    }
+    .impl-med-layout {
         grid-template-columns: 1fr;
     }
-
-    .impl-process__steps {
+    .impl-med-img {
+        position: static;
+    }
+    .impl-card {
+        grid-template-columns: 140px 1fr;
+    }
+    .impl-steps {
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 20px;
     }
-
-    .impl-process__arrow {
+    .impl-step-arrow {
         display: none;
-    }
-
-    .impl-advantages__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .impl-directions__grid {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -326,320 +488,53 @@
     .impl-hero {
         padding: 40px 0 36px;
     }
-
     .impl-hero__title {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
     }
-
-    .impl-section-title {
-        font-size: 1.7rem;
+    .impl-hero__lead {
+        font-size: 1.2rem;
     }
-
-    .impl-directions__grid {
+    .impl-section__title {
+        font-size: 1.6rem;
+    }
+    .impl-grid-2,
+    .impl-materials-grid {
         grid-template-columns: 1fr;
+    }
+    .impl-grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .impl-grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .impl-specs {
+        grid-template-columns: 1fr;
+    }
+    .impl-card {
+        grid-template-columns: 1fr;
+    }
+    .impl-card__img-col {
+        height: 180px;
+    }
+    .impl-card__text-col {
+        padding: 0 16px 16px;
+    }
+    .impl-card-adv__img-wrap {
+        height: 160px;
     }
 }
 
 @media (max-width: 480px) {
+    .impl-section {
+        padding: 36px 0;
+    }
     .impl-hero {
         padding: 32px 0 28px;
     }
-
     .impl-hero__title {
-        font-size: 1.65rem;
+        font-size: 1.6rem;
     }
-
-    .impl-material,
-    .impl-printer,
-    .impl-process,
-    .impl-advantages,
-    .impl-directions {
-        padding: 36px 0 40px;
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════
-   НОВЫЕ БЛОКИ — Металлическая 3D-печать HBD
-   ═══════════════════════════════════════════════════════════ */
-
-/* ─── ТЕХНОЛОГИЧЕСКИЕ ВОЗМОЖНОСТИ ───────────────────── */
-
-.impl-tech {
-    padding: 56px 0;
-    background: #f7f9ff;
-}
-
-.impl-tech__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.impl-tech__card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.12);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.impl-tech__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
-}
-
-.impl-tech__icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-.impl-tech__card-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #123a5d;
-}
-
-.impl-tech__card-text {
-    font-size: 0.96rem;
-    line-height: 1.65;
-    margin: 0;
-    color: #3d5a78;
-}
-
-/* ─── МАТЕРИАЛЫ ──────────────────────────────────────── */
-
-.impl-materials {
-    padding: 56px 0;
-    background: #ffffff;
-}
-
-.impl-materials__intro {
-    font-size: 1.06rem;
-    line-height: 1.7;
-    color: #3d5a78;
-    margin: 0 0 32px;
-    text-align: center;
-}
-
-.impl-table--wide {
-    max-width: 100%;
-    font-size: 0.9rem;
-}
-
-.impl-table--wide td:first-child {
-    white-space: nowrap;
-    color: #123a5d;
-    font-weight: 600;
-}
-
-.impl-table--wide td:nth-child(2) {
-    min-width: 180px;
-}
-
-/* ─── ПРЕИМУЩЕСТВА (иконка) ──────────────────────────── */
-
-.impl-advantages__icon {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-}
-
-/* ─── ОТРАСЛИ ────────────────────────────────────────── */
-
-.impl-industries {
-    padding: 56px 0;
-    background: #f7f9ff;
-}
-
-.impl-industries__intro {
-    font-size: 1.06rem;
-    line-height: 1.7;
-    color: #3d5a78;
-    margin: 0 0 32px;
-    text-align: center;
-}
-
-.impl-industries__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.impl-industries__card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 24px 20px;
-    border: 1px solid rgba(22, 107, 182, 0.12);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.impl-industries__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
-}
-
-.impl-industries__icon {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.impl-industries__card-title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 0 0 8px;
-    color: #123a5d;
-}
-
-.impl-industries__card-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin: 0;
-    color: #3d5a78;
-}
-
-/* ─── МЕДИЦИНСКИЕ НАПРАВЛЕНИЯ ─────────────────────────── */
-
-.impl-medical {
-    padding: 56px 0;
-    background: #ffffff;
-}
-
-.impl-medical__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.impl-medical__card {
-    background: #f5f9ff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.10);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.impl-medical__card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.16);
-}
-
-.impl-medical__icon {
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-.impl-medical__card-title {
-    font-size: 1.12rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #123a5d;
-}
-
-.impl-medical__card-text {
-    font-size: 0.96rem;
-    line-height: 1.65;
-    margin: 0;
-    color: #3d5a78;
-}
-
-/* ─── КЕЙСЫ ──────────────────────────────────────────── */
-
-.impl-cases {
-    padding: 56px 0 64px;
-    background: #f7f9ff;
-}
-
-.impl-cases__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.impl-cases__card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    border: 1px solid rgba(22, 107, 182, 0.12);
-    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
-}
-
-.impl-cases__card-title {
-    font-size: 1.12rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #123a5d;
-}
-
-.impl-cases__card-text {
-    font-size: 0.96rem;
-    line-height: 1.6;
-    margin: 0 0 14px;
-    color: #3d5a78;
-}
-
-.impl-cases__specs {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.impl-cases__specs li {
-    font-size: 0.9rem;
-    color: #45627d;
-    padding: 4px 0 4px 18px;
-    position: relative;
-}
-
-.impl-cases__specs li::before {
-    content: '\25B8';
-    position: absolute;
-    left: 0;
-    color: #3aa1e4;
-}
-
-/* ─── АДАПТИВ ДЛЯ НОВЫХ БЛОКОВ ───────────────────────── */
-
-@media (max-width: 1200px) {
-    .impl-industries__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 992px) {
-    .impl-medical__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .impl-cases__grid {
+    .impl-mat-card__props {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .impl-tech__grid,
-    .impl-industries__grid,
-    .impl-medical__grid {
-        grid-template-columns: 1fr;
-    }
-    .impl-cases__grid {
-        grid-template-columns: 1fr;
-    }
-    .impl-table--wide {
-        font-size: 0.82rem;
-    }
-    .impl-table--wide td:nth-child(2) {
-        min-width: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .impl-tech,
-    .impl-materials,
-    .impl-industries,
-    .impl-medical,
-    .impl-cases {
-        padding: 36px 0 40px;
     }
 }

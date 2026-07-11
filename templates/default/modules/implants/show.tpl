@@ -1,133 +1,156 @@
-<section class="impl-hero">
+<section class="impl-hero" style="background-image: url('{$page_img}');">
     <div class="container">
-        <h1 class="impl-hero__title">{$page_title}</h1>
-        <p class="impl-hero__lead">{$page_lead}</p>
-        <p class="impl-hero__intro">{$page_intro}</p>
-    </div>
-</section>
-
-<section class="impl-printer">
-    <div class="container">
-        <h2 class="impl-section-title">{$printer_name}</h2>
-        <p class="impl-printer__intro">{$printer_intro}</p>
-        <div class="impl-table-wrapper">
-            <table class="impl-table">
-                <thead>
-                    <tr><th>Параметр</th><th>Значение</th></tr>
-                </thead>
-                <tbody>
-                    {foreach from=$printer_specs item=s}
-                    <tr><td>{$s.param}</td><td>{$s.value}</td></tr>
-                    {/foreach}
-                </tbody>
-            </table>
+        <div class="impl-hero__overlay">
+            <h1 class="impl-hero__title">{$page_title}</h1>
+            <p class="impl-hero__lead">{$page_lead}</p>
+            <p class="impl-hero__intro">{$page_intro}</p>
         </div>
     </div>
 </section>
 
-<section class="impl-tech">
+<section class="impl-section impl-section--white">
     <div class="container">
-        <h2 class="impl-section-title">Технологические возможности</h2>
-        <div class="impl-tech__grid">
+        <div class="impl-split">
+            <div class="impl-split__text">
+                <h2 class="impl-section__title">{$printer_name}</h2>
+                <p class="impl-text">{$printer_intro}</p>
+                <ul class="impl-specs">
+                    {foreach from=$printer_highlights item=h}
+                    <li><strong>{$h.label}:</strong> {$h.value}</li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="impl-split__img">
+                <img src="{$printer_img}" alt="HBD 400" loading="lazy" class="impl-photo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="impl-section impl-section--light">
+    <div class="container">
+        <h2 class="impl-section__title impl-section__title--center">Технологические возможности HBD</h2>
+        <div class="impl-grid-2">
             {foreach from=$tech_features item=f}
-            <div class="impl-tech__card">
-                <div class="impl-tech__icon">{$f.icon}</div>
-                <h3 class="impl-tech__card-title">{$f.title}</h3>
-                <p class="impl-tech__card-text">{$f.text}</p>
+            <div class="impl-card impl-card--row">
+                <div class="impl-card__img-col">
+                    <img src="{$f.img}" alt="{$f.title}" loading="lazy" class="impl-card__img">
+                </div>
+                <div class="impl-card__text-col">
+                    <h3 class="impl-card__title">{$f.title}</h3>
+                    <p class="impl-card__text">{$f.text}</p>
+                </div>
             </div>
             {/foreach}
         </div>
     </div>
 </section>
 
-<section class="impl-materials">
+<section class="impl-section impl-section--white">
     <div class="container">
-        <h2 class="impl-section-title">Материалы</h2>
-        <p class="impl-materials__intro">{$materials_intro}</p>
-        <div class="impl-table-wrapper">
-            <table class="impl-table impl-table--wide">
-                <thead>
-                    <tr>
-                        <th>Материал</th>
-                        <th>Описание</th>
-                        <th>Предел текучести, МПа</th>
-                        <th>Предел прочности, МПа</th>
-                        <th>Относит. удлинение, %</th>
-                        <th>Твёрдость</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {foreach from=$materials item=m}
-                    <tr>
-                        <td><strong>{$m.name}</strong></td>
-                        <td>{$m.desc}</td>
-                        <td>{$m.yield}</td>
-                        <td>{$m.tensile}</td>
-                        <td>{$m.elong}</td>
-                        <td>{$m.hardness}</td>
-                    </tr>
-                    {/foreach}
-                </tbody>
-            </table>
+        <h2 class="impl-section__title impl-section__title--center">Материалы</h2>
+        <p class="impl-lead-text">{$materials_intro}</p>
+        <div class="impl-materials-grid">
+            {foreach from=$materials item=m}
+            <div class="impl-mat-card">
+                <h3 class="impl-mat-card__name">{$m.name}</h3>
+                <p class="impl-mat-card__desc">{$m.desc}</p>
+                <div class="impl-mat-card__props">
+                    <span class="impl-prop"><span class="impl-prop__label">Текучесть</span> {$m.yield} МПа</span>
+                    <span class="impl-prop"><span class="impl-prop__label">Прочность</span> {$m.tensile} МПа</span>
+                    <span class="impl-prop"><span class="impl-prop__label">Удлинение</span> {$m.elong}%</span>
+                    <span class="impl-prop"><span class="impl-prop__label">Твёрдость</span> {$m.hardness}</span>
+                </div>
+            </div>
+            {/foreach}
         </div>
     </div>
 </section>
 
-<section class="impl-advantages">
+<section class="impl-section impl-section--light">
     <div class="container">
-        <h2 class="impl-section-title">Ключевые преимущества</h2>
-        <div class="impl-advantages__grid">
+        <h2 class="impl-section__title impl-section__title--center">{$process_title}</h2>
+        <div class="impl-steps">
+            {foreach from=$process_steps item=s name=steps}
+            <div class="impl-step">
+                <div class="impl-step__num">{$s.num}</div>
+                <h3 class="impl-step__title">{$s.title}</h3>
+                <p class="impl-step__text">{$s.text}</p>
+            </div>
+            {if not $smarty.foreach.steps.last}
+            <div class="impl-step-arrow"></div>
+            {/if}
+            {/foreach}
+        </div>
+    </div>
+</section>
+
+<section class="impl-section impl-section--white">
+    <div class="container">
+        <h2 class="impl-section__title impl-section__title--center">Ключевые преимущества</h2>
+        <div class="impl-grid-3">
             {foreach from=$advantages item=a}
-            <div class="impl-advantages__card">
-                <div class="impl-advantages__icon">{$a.icon}</div>
-                <h3 class="impl-advantages__card-title">{$a.title}</h3>
-                <p class="impl-advantages__card-text">{$a.text}</p>
+            <div class="impl-card-adv">
+                <div class="impl-card-adv__img-wrap">
+                    <img src="{$a.img}" alt="{$a.title}" loading="lazy" class="impl-card-adv__img">
+                </div>
+                <h3 class="impl-card-adv__title">{$a.title}</h3>
+                <p class="impl-card-adv__text">{$a.text}</p>
             </div>
             {/foreach}
         </div>
     </div>
 </section>
 
-<section class="impl-industries">
+<section class="impl-section impl-section--light">
     <div class="container">
-        <h2 class="impl-section-title">{$industries_title}</h2>
-        <p class="impl-industries__intro">{$industries_intro}</p>
-        <div class="impl-industries__grid">
+        <h2 class="impl-section__title impl-section__title--center">{$industries_title}</h2>
+        <p class="impl-lead-text">{$industries_intro}</p>
+        <div class="impl-grid-4">
             {foreach from=$industries item=ind}
-            <div class="impl-industries__card">
-                <div class="impl-industries__icon">{$ind.icon}</div>
-                <h3 class="impl-industries__card-title">{$ind.title}</h3>
-                <p class="impl-industries__card-text">{$ind.text}</p>
+            <div class="impl-card-adv">
+                <div class="impl-card-adv__img-wrap">
+                    <img src="{$ind.img}" alt="{$ind.title}" loading="lazy" class="impl-card-adv__img">
+                </div>
+                <h3 class="impl-card-adv__title">{$ind.title}</h3>
+                <p class="impl-card-adv__text">{$ind.text}</p>
             </div>
             {/foreach}
         </div>
     </div>
 </section>
 
-<section class="impl-medical">
+<section class="impl-section impl-section--white">
     <div class="container">
-        <h2 class="impl-section-title">Медицинские направления</h2>
-        <div class="impl-medical__grid">
-            {foreach from=$med_directions item=d}
-            <div class="impl-medical__card">
-                <div class="impl-medical__icon">{$d.icon}</div>
-                <h3 class="impl-medical__card-title">{$d.title}</h3>
-                <p class="impl-medical__card-text">{$d.text}</p>
+        <h2 class="impl-section__title impl-section__title--center">{$med_title}</h2>
+        <div class="impl-med-layout">
+            <div class="impl-med-grid">
+                {foreach from=$med_directions item=d}
+                <div class="impl-med-card">
+                    <h3 class="impl-med-card__title">{$d.title}</h3>
+                    <p class="impl-med-card__text">{$d.text}</p>
+                </div>
+                {/foreach}
             </div>
-            {/foreach}
+            <div class="impl-med-img">
+                <img src="{$med_img}" alt="Медицинские импланты" loading="lazy" class="impl-photo">
+            </div>
         </div>
     </div>
 </section>
 
-<section class="impl-cases">
+<section class="impl-section impl-section--light">
     <div class="container">
-        <h2 class="impl-section-title">Примеры реализации</h2>
-        <div class="impl-cases__grid">
+        <h2 class="impl-section__title impl-section__title--center">Примеры реализации</h2>
+        <div class="impl-grid-3">
             {foreach from=$cases item=c}
-            <div class="impl-cases__card">
-                <h3 class="impl-cases__card-title">{$c.title}</h3>
-                <p class="impl-cases__card-text">{$c.desc}</p>
-                <ul class="impl-cases__specs">
+            <div class="impl-card-adv">
+                <div class="impl-card-adv__img-wrap">
+                    <img src="{$c.img}" alt="{$c.title}" loading="lazy" class="impl-card-adv__img">
+                </div>
+                <h3 class="impl-card-adv__title">{$c.title}</h3>
+                <p class="impl-card-adv__text">{$c.desc}</p>
+                <ul class="impl-bullets">
                     {foreach from=$c.specs item=s}
                     <li>{$s}</li>
                     {/foreach}
