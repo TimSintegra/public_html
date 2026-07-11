@@ -65,6 +65,21 @@
     </div>
 </section>
 
+<section class="impl-section">
+    <div class="container">
+        <h2 class="impl-title impl-title--center">{$tc4_title}</h2>
+        <div class="impl-grid2">
+            {foreach from=$tc4_cards item=c}
+            <div class="impl-card-mat">
+                <div style="font-size:2rem;margin-bottom:10px">{$c.icon}</div>
+                <h3 class="impl-card-mat__name">{$c.title}</h3>
+                <p class="impl-card-mat__desc">{$c.text}</p>
+            </div>
+            {/foreach}
+        </div>
+    </div>
+</section>
+
 <section class="impl-section impl-section--alt">
     <div class="container">
         <h2 class="impl-title impl-title--center">Ключевые преимущества</h2>
