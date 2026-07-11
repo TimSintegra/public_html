@@ -55,7 +55,7 @@
 
                     <a href="{$MAIN_URL}/implants.html" class="reverse-engineering__item">
                         <span class="reverse-engineering__item-title">
-                            3D‑печать медицинских имплантов из титанового сплава
+                            Металлическая 3D‑печать: от имплантов до промышленных деталей
                         </span>
                     </a>
                 </div>
