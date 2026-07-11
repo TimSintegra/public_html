@@ -1,439 +1,347 @@
 /* ═══════════════════════════════════════════════════════════
-   МЕТАЛЛИЧЕСКАЯ 3D-ПЕЧАТЬ — Стили страницы
+   МЕТАЛЛИЧЕСКАЯ 3D-ПЕЧАТЬ
    ═══════════════════════════════════════════════════════════ */
 
 /* ─── HERO ─────────────────────────────────────────────── */
 
 .impl-hero {
-    padding: 80px 0 72px;
+    padding: 64px 0 56px;
     background: linear-gradient(135deg, #0d2b4a 0%, #166bb6 60%, #1a7fd1 100%);
-    background-size: cover;
-    background-position: center;
     color: #ffffff;
-    position: relative;
-}
-
-.impl-hero__overlay {
-    max-width: 800px;
 }
 
 .impl-hero__title {
-    font-size: 2.8rem;
-    line-height: 1.15;
-    margin: 0 0 18px;
+    font-size: 2.6rem;
+    line-height: 1.2;
     font-weight: 800;
+    margin: 0 0 16px;
 }
 
 .impl-hero__lead {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin: 0 0 14px;
-    color: rgba(255, 255, 255, 0.92);
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .impl-hero__intro {
-    font-size: 1.1rem;
-    line-height: 1.75;
+    font-size: 1.05rem;
+    line-height: 1.7;
     margin: 0;
-    color: rgba(255, 255, 255, 0.78);
-    max-width: 720px;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 780px;
 }
 
-/* ─── ОБЩИЕ ────────────────────────────────────────────── */
+/* ─── СЕКЦИИ ───────────────────────────────────────────── */
 
 .impl-section {
-    padding: 64px 0;
-}
-
-.impl-section--white {
+    padding: 56px 0;
     background: #ffffff;
 }
 
-.impl-section--light {
+.impl-section--alt {
     background: #f5f8fc;
 }
 
-.impl-section__title {
+.impl-title {
     font-size: 2rem;
     font-weight: 800;
     color: #123a5d;
-    margin: 0 0 28px;
+    margin: 0 0 24px;
     line-height: 1.25;
 }
 
-.impl-section__title--center {
+.impl-title--center {
     text-align: center;
 }
 
 .impl-text {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.75;
     color: #3d5a78;
     margin: 0 0 20px;
 }
 
-.impl-lead-text {
-    font-size: 1.06rem;
+.impl-lead {
+    font-size: 1.02rem;
     line-height: 1.7;
     color: #3d5a78;
-    margin: 0 auto 40px;
-    max-width: 800px;
+    margin: 0 auto 36px;
+    max-width: 760px;
     text-align: center;
 }
 
-.impl-photo {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(11, 46, 86, 0.12);
-}
+/* ─── СТРОКА (TEXT + IMG) ──────────────────────────────── */
 
-/* ─── SPLIT (текст + изображение) ─────────────────────── */
-
-.impl-split {
+.impl-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 40px;
     align-items: center;
 }
 
-.impl-split__text {
-    order: 1;
+.impl-row__text {
+    min-width: 0;
 }
 
-.impl-split__img {
-    order: 2;
+.impl-row__img img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(11, 46, 86, 0.15);
 }
 
-.impl-specs {
+.impl-list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 24px;
+    gap: 8px 20px;
 }
 
-.impl-specs li {
-    font-size: 0.96rem;
+.impl-list li {
+    font-size: 0.95rem;
     color: #3d5a78;
     padding: 6px 0;
     border-bottom: 1px solid rgba(22, 107, 182, 0.08);
 }
 
-.impl-specs li strong {
+.impl-list li strong {
     color: #123a5d;
     font-weight: 600;
 }
 
-/* ─── GRID 2 ───────────────────────────────────────────── */
+/* ─── СЕТКИ ────────────────────────────────────────────── */
 
-.impl-grid-2 {
+.impl-grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
-}
-
-/* ─── GRID 3 ───────────────────────────────────────────── */
-
-.impl-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-/* ─── GRID 4 ───────────────────────────────────────────── */
-
-.impl-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
-/* ─── CARD ROW (горизонтальная карточка) ──────────────── */
-
-.impl-card {
+.impl-grid3 {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.impl-grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+/* ─── ГОРИЗОНТАЛЬНАЯ КАРТОЧКА ────────────────────────── */
+
+.impl-card-h {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0;
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 14px;
     border: 1px solid rgba(22, 107, 182, 0.10);
-    box-shadow: 0 6px 22px rgba(9, 45, 91, 0.06);
+    box-shadow: 0 4px 16px rgba(9, 45, 91, 0.05);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.impl-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(22, 107, 182, 0.16);
+.impl-card-h:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(22, 107, 182, 0.12);
 }
 
-.impl-card__img-col {
+.impl-card-h__img {
     overflow: hidden;
 }
 
-.impl-card__img {
+.impl-card-h__img img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.impl-card__text-col {
-    padding: 20px 20px 20px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.impl-card-h__body {
+    padding: 20px;
 }
 
-.impl-card__title {
-    font-size: 1.1rem;
+.impl-card-h__title {
+    font-size: 1.05rem;
     font-weight: 700;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: #123a5d;
 }
 
-.impl-card__text {
-    font-size: 0.95rem;
-    line-height: 1.65;
+.impl-card-h__text {
+    font-size: 0.92rem;
+    line-height: 1.6;
     margin: 0;
     color: #3d5a78;
 }
 
-/* ─── CARD ADV (вертикальная карточка с изображением) ──── */
+/* ─── ВЕРТИКАЛЬНАЯ КАРТОЧКА ─────────────────────────────── */
 
-.impl-card-adv {
+.impl-card-v {
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 14px;
     border: 1px solid rgba(22, 107, 182, 0.10);
-    box-shadow: 0 6px 22px rgba(9, 45, 91, 0.05);
+    box-shadow: 0 4px 16px rgba(9, 45, 91, 0.05);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
 }
 
-.impl-card-adv:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(22, 107, 182, 0.14);
+.impl-card-v:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(22, 107, 182, 0.12);
 }
 
-.impl-card-adv__img-wrap {
+.impl-card-v__img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
 }
 
-.impl-card-adv__img {
+.impl-card-v__img img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.impl-card-adv:hover .impl-card-adv__img {
+.impl-card-v:hover .impl-card-v__img img {
     transform: scale(1.04);
 }
 
-.impl-card-adv__title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    margin: 16px 20px 8px;
-    color: #123a5d;
-    line-height: 1.35;
+.impl-card-v__body {
+    padding: 18px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.impl-card-adv__text {
-    font-size: 0.92rem;
-    line-height: 1.65;
-    margin: 0 20px 16px;
+.impl-card-v__title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #123a5d;
+}
+
+.impl-card-v__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 12px;
     color: #3d5a78;
     flex: 1;
 }
 
 /* ─── МАТЕРИАЛЫ ──────────────────────────────────────── */
 
-.impl-materials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.impl-mat-card {
+.impl-card-mat {
     background: #f5f8fc;
-    border-radius: 14px;
-    padding: 24px;
+    border-radius: 12px;
+    padding: 22px;
     border: 1px solid rgba(22, 107, 182, 0.08);
 }
 
-.impl-mat-card__name {
-    font-size: 1.08rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #123a5d;
-}
-
-.impl-mat-card__desc {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    margin: 0 0 14px;
-    color: #3d5a78;
-}
-
-.impl-mat-card__props {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 16px;
-}
-
-.impl-prop {
-    font-size: 0.88rem;
-    color: #34526e;
-}
-
-.impl-prop__label {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: #6f8ba8;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-right: 4px;
-}
-
-/* ─── ПРОЦЕСС (шаги) ──────────────────────────────────── */
-
-.impl-steps {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0;
-    max-width: 860px;
-    margin: 0 auto;
-}
-
-.impl-step {
-    flex: 1;
-    text-align: center;
-    padding: 0 12px;
-}
-
-.impl-step__num {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #166bb6, #3aa1e4);
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 14px;
-    box-shadow: 0 6px 18px rgba(22, 107, 182, 0.3);
-}
-
-.impl-step__title {
-    font-size: 1.1rem;
+.impl-card-mat__name {
+    font-size: 1.05rem;
     font-weight: 700;
     margin: 0 0 8px;
     color: #123a5d;
 }
 
-.impl-step__text {
-    font-size: 0.92rem;
+.impl-card-mat__desc {
+    font-size: 0.9rem;
     line-height: 1.55;
-    margin: 0;
-    color: #45627d;
+    margin: 0 0 12px;
+    color: #3d5a78;
 }
 
-.impl-step-arrow {
-    width: 40px;
-    height: 2px;
-    background: #3aa1e4;
-    margin-top: 30px;
-    position: relative;
-    flex-shrink: 0;
+.impl-card-mat__props {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 14px;
+    font-size: 0.88rem;
+    color: #34526e;
 }
 
-.impl-step-arrow::after {
-    content: '';
-    position: absolute;
-    right: -6px;
-    top: -4px;
-    border: 5px solid transparent;
-    border-left-color: #3aa1e4;
+.impl-card-mat__props b {
+    color: #123a5d;
+    font-weight: 600;
 }
 
 /* ─── МЕДИЦИНСКИЙ РАЗДЕЛ ──────────────────────────────── */
 
-.impl-med-layout {
+.impl-med {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 36px;
     align-items: start;
 }
 
-.impl-med-grid {
+.impl-med__list {
     display: grid;
-    gap: 16px;
+    gap: 12px;
 }
 
-.impl-med-card {
+.impl-med__item {
     background: #f5f8fc;
-    border-radius: 12px;
-    padding: 18px 22px;
+    border-radius: 10px;
+    padding: 16px 20px;
     border-left: 4px solid #166bb6;
 }
 
-.impl-med-card__title {
+.impl-med__title {
     font-size: 1rem;
     font-weight: 700;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     color: #123a5d;
 }
 
-.impl-med-card__text {
+.impl-med__text {
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.55;
     margin: 0;
     color: #3d5a78;
 }
 
-.impl-med-img {
-    position: sticky;
-    top: 100px;
+.impl-med__img {
+    min-width: 0;
 }
 
-.impl-med-img .impl-photo {
+.impl-med__img img {
+    display: block;
     width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(11, 46, 86, 0.12);
 }
 
 /* ─── КЕЙСЫ ──────────────────────────────────────────── */
 
-.impl-bullets {
+.impl-bullet {
     list-style: none;
-    margin: 0 20px 18px;
+    margin: 0;
     padding: 0;
 }
 
-.impl-bullets li {
+.impl-bullet li {
     font-size: 0.88rem;
     color: #45627d;
-    padding: 4px 0 4px 18px;
+    padding: 3px 0 3px 16px;
     position: relative;
 }
 
-.impl-bullets li::before {
+.impl-bullet li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 11px;
-    width: 7px;
-    height: 7px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: #3aa1e4;
 }
@@ -441,100 +349,76 @@
 /* ─── АДАПТИВ ──────────────────────────────────────────── */
 
 @media (max-width: 1100px) {
-    .impl-grid-4 {
-        grid-template-columns: repeat(2, 1fr);
+    .impl-grid4 {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 992px) {
     .impl-hero {
-        padding: 52px 0 48px;
+        padding: 48px 0 40px;
     }
     .impl-hero__title {
         font-size: 2.2rem;
     }
     .impl-section {
-        padding: 48px 0;
+        padding: 44px 0;
     }
-    .impl-split {
-        grid-template-columns: 1fr;
-        gap: 28px;
+    .impl-title {
+        font-size: 1.7rem;
     }
-    .impl-split__img {
-        order: 1;
-    }
-    .impl-split__text {
-        order: 2;
-    }
-    .impl-med-layout {
+    .impl-row {
         grid-template-columns: 1fr;
     }
-    .impl-med-img {
-        position: static;
+    .impl-row__img {
+        order: -1;
     }
-    .impl-card {
-        grid-template-columns: 140px 1fr;
-    }
-    .impl-steps {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .impl-step-arrow {
-        display: none;
+    .impl-med {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .impl-hero {
-        padding: 40px 0 36px;
-    }
     .impl-hero__title {
-        font-size: 1.85rem;
+        font-size: 1.8rem;
     }
     .impl-hero__lead {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
-    .impl-section__title {
-        font-size: 1.6rem;
-    }
-    .impl-grid-2,
-    .impl-materials-grid {
+    .impl-grid2,
+    .impl-grid3,
+    .impl-grid4 {
         grid-template-columns: 1fr;
     }
-    .impl-grid-3 {
+    .impl-list {
         grid-template-columns: 1fr;
     }
-    .impl-grid-4 {
+    .impl-card-h {
         grid-template-columns: 1fr;
     }
-    .impl-specs {
-        grid-template-columns: 1fr;
-    }
-    .impl-card {
-        grid-template-columns: 1fr;
-    }
-    .impl-card__img-col {
+    .impl-card-h__img {
         height: 180px;
     }
-    .impl-card__text-col {
-        padding: 0 16px 16px;
+    .impl-card-v__img {
+        height: 180px;
     }
-    .impl-card-adv__img-wrap {
-        height: 160px;
+    .impl-card-mat__props {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .impl-section {
-        padding: 36px 0;
-    }
     .impl-hero {
-        padding: 32px 0 28px;
+        padding: 36px 0 32px;
     }
     .impl-hero__title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-    .impl-mat-card__props {
-        grid-template-columns: 1fr;
+    .impl-section {
+        padding: 32px 0;
+    }
+    .impl-title {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
     }
 }
