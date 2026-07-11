@@ -293,6 +293,322 @@
     color: #3d5a78;
 }
 
+/* ─── ИЗОБРАЖЕНИЕ ПРИНТЕРА ────────────────────────────── */
+
+.impl-hero-img {
+    padding: 0 0 40px;
+    background: #ffffff;
+}
+
+.impl-hero-img__wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.impl-hero-img__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(9, 45, 91, 0.15);
+}
+
+/* ─── МЕХАНИЧЕСКИЕ СВОЙСТВА TC4 ───────────────────────── */
+
+.impl-properties {
+    padding: 48px 0 56px;
+    background: #f7f9ff;
+}
+
+/* ─── HBD 400 ──────────────────────────────────────────── */
+
+.impl-hbd {
+    padding: 48px 0 56px;
+    background: #ffffff;
+}
+
+.impl-hbd__intro {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 32px;
+    text-align: center;
+}
+
+/* ─── ПОРОШКОВАЯ СИСТЕМА ────────────────────────────────── */
+
+.impl-powder {
+    padding: 56px 0 64px;
+    background: #f7f9ff;
+}
+
+.impl-powder__intro {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.impl-powder__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.impl-powder__step {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-powder__step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(22, 107, 182, 0.18);
+}
+
+.impl-powder__step-img {
+    margin-bottom: 20px;
+}
+
+.impl-powder__step-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 120px;
+    border-radius: 8px;
+}
+
+.impl-powder__step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-powder__step-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── ФИЛЬТРАЦИЯ ────────────────────────────────────────── */
+
+.impl-filtration {
+    padding: 56px 0 64px;
+    background: #ffffff;
+}
+
+.impl-filtration__text {
+    font-size: 1.06rem;
+    line-height: 1.75;
+    color: #3d5a78;
+    margin: 0 auto;
+    max-width: 860px;
+    text-align: center;
+}
+
+/* ─── КАЧЕСТВО И СТАБИЛЬНОСТЬ ──────────────────────────── */
+
+.impl-quality {
+    padding: 48px 0 56px;
+    background: #f7f9ff;
+}
+
+.impl-quality__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.impl-quality__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(22, 107, 182, 0.12);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-quality__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-quality__icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.impl-quality__card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-quality__card-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── ПОЛНЫЙ ЦИФРОВОЙ ЦИКЛ ─────────────────────────────── */
+
+.impl-digital {
+    padding: 56px 0 64px;
+    background: #ffffff;
+}
+
+.impl-digital__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.impl-digital__step {
+    background: #f5f9ff;
+    border-radius: 20px;
+    padding: 28px 20px;
+    text-align: center;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-digital__step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(22, 107, 182, 0.18);
+}
+
+.impl-digital__step-img {
+    margin-bottom: 16px;
+}
+
+.impl-digital__step-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 110px;
+    border-radius: 8px;
+}
+
+.impl-digital__step-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #123a5d;
+}
+
+.impl-digital__step-text {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #3d5a78;
+}
+
+/* ─── ПОДДЕРЖИВАЕМЫЕ МАТЕРИАЛЫ ─────────────────────────── */
+
+.impl-materials {
+    padding: 48px 0 56px;
+    background: #f7f9ff;
+}
+
+.impl-materials__text {
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: #3d5a78;
+    margin: 0 0 36px;
+    text-align: center;
+}
+
+.impl-materials__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
+
+.impl-materials__logo-item {
+    flex: 0 0 auto;
+}
+
+.impl-materials__logo-img {
+    max-height: 60px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.impl-materials__logo-img:hover {
+    opacity: 1;
+}
+
+/* ─── ПРИМЕРЫ МЕДИЦИНСКИХ ПРИМЕНЕНИЙ ───────────────────── */
+
+.impl-cases {
+    padding: 56px 0 64px;
+    background: #ffffff;
+}
+
+.impl-cases__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.impl-cases__card {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    background: #f5f9ff;
+    border-radius: 20px;
+    padding: 28px 32px;
+    border: 1px solid rgba(22, 107, 182, 0.10);
+    box-shadow: 0 6px 20px rgba(9, 45, 91, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.impl-cases__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(22, 107, 182, 0.18);
+}
+
+.impl-cases__card-img {
+    flex: 0 0 200px;
+}
+
+.impl-cases__card-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(9, 45, 91, 0.12);
+}
+
+.impl-cases__card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.impl-cases__card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #123a5d;
+}
+
+.impl-cases__card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    color: #3d5a78;
+}
+
 /* ─── АДАПТИВ ──────────────────────────────────────────── */
 
 @media (max-width: 992px) {
@@ -302,6 +618,11 @@
 
     .impl-material__grid {
         grid-template-columns: 1fr;
+    }
+
+    .impl-powder__steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .impl-process__steps {
@@ -320,6 +641,21 @@
     .impl-directions__grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .impl-digital__steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .impl-cases__card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .impl-cases__card-img {
+        flex: 0 0 auto;
+        max-width: 320px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -335,7 +671,15 @@
         font-size: 1.7rem;
     }
 
+    .impl-quality__grid {
+        grid-template-columns: 1fr;
+    }
+
     .impl-directions__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impl-digital__steps {
         grid-template-columns: 1fr;
     }
 }
@@ -349,11 +693,28 @@
         font-size: 1.65rem;
     }
 
+    .impl-hero-img,
     .impl-material,
+    .impl-properties,
+    .impl-hbd,
+    .impl-powder,
+    .impl-filtration,
+    .impl-quality,
     .impl-printer,
     .impl-process,
     .impl-advantages,
-    .impl-directions {
+    .impl-directions,
+    .impl-digital,
+    .impl-materials,
+    .impl-cases {
         padding: 36px 0 40px;
+    }
+
+    .impl-materials__logos {
+        gap: 20px;
+    }
+
+    .impl-materials__logo-img {
+        max-height: 44px;
     }
 }
