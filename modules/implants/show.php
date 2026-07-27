@@ -221,9 +221,7 @@ $med_directions = [
 ];
 
 $med_imgs = [
-    "$img/hbd_page20_3.png",
-    "$img/hbd_page20_4.jpeg",
-    "$img/hbd_page20_5.png",
+    "$img/hbd_page23_24.jpeg",
     "$img/hbd_page23_25.png",
     "$img/hbd_page23_31.png",
     "$img/hbd_page24_3.jpeg",
