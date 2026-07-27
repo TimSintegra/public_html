@@ -5,6 +5,7 @@
 
 if (!isset($TPL_URL)) { $TPL_URL = '/templates/default'; }
 $img = $TPL_URL . '/assets/images/hbd';
+$img1 = $TPL_URL . '/assets/images/итэ';
 
 // ─── HERO ───────────────────────────────────────────────────
 $page_title = 'Металлическая 3D‑печать: технологии и производство';
@@ -221,15 +222,15 @@ $med_directions = [
 ];
 
 $med_imgs = [
-    "$img/1_1.png",
-    "$img/1_2.png",
-    "$img/2_1.png",
-    "$img/2_2.png",
-    "$img/3_1.png",
-    "$img/3_2.png",
-    "$img/4_1.png",
-    "$img/4_2.png",
-    "$img/5_1.png",
+    "$$img1/1_1.png",
+    "$img1/1_2.png",
+    "$img1/2_1.png",
+    "$img1/2_2.png",
+    "$img1/3_1.png",
+    "$img1/3_2.png",
+    "$img1/4_1.png",
+    "$img1/4_2.png",
+    "$img1/5_1.png",
 ];
 
 // ─── КЕЙСЫ ────────────────────────────────────────────
