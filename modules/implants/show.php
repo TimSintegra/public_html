@@ -227,6 +227,8 @@ $med_imgs = [
     "$img/hbd_page23_25.png",
     "$img/hbd_page23_31.png",
     "$img/hbd_page24_3.jpeg",
+    "$img/hbd_page22_8.jpeg",
+    "$img/hbd_page22_5.jpeg",
 ];
 
 // ─── КЕЙСЫ ────────────────────────────────────────────
