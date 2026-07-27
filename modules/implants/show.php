@@ -222,7 +222,7 @@ $med_directions = [
 ];
 
 $med_imgs = [
-    "$$img1/1_1.png",
+    "$img1/1_1.png",
     "$img1/1_2.png",
     "$img1/2_1.png",
     "$img1/2_2.png",
