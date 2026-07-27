@@ -220,7 +220,14 @@ $med_directions = [
     ],
 ];
 
-$med_img  = "$img/hbd_page12_1.png";
+$med_imgs = [
+    "$img/hbd_page20_3.png",
+    "$img/hbd_page20_4.jpeg",
+    "$img/hbd_page20_5.png",
+    "$img/hbd_page23_25.png",
+    "$img/hbd_page23_31.png",
+    "$img/hbd_page24_3.jpeg",
+];
 
 // ─── КЕЙСЫ ────────────────────────────────────────────
 $cases = [
@@ -264,7 +271,7 @@ $smarty->assign('industries_intro', $industries_intro);
 $smarty->assign('industries', $industries);
 $smarty->assign('med_title', $med_title);
 $smarty->assign('med_directions', $med_directions);
-$smarty->assign('med_img', $med_img);
+$smarty->assign('med_imgs', $med_imgs);
 $smarty->assign('cases', $cases);
 $smarty->assign('tc4_title', $tc4_title);
 $smarty->assign('tc4_cards', $tc4_cards);

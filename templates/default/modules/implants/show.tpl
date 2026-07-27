@@ -131,9 +131,13 @@
                 </div>
                 {/foreach}
             </div>
-            <div class="impl-med__img">
-                <img src="{$med_img}" alt="Медицинские импланты" loading="lazy">
-            </div>
+    <div class="impl-med__imgs">
+        {foreach from=$med_imgs item=mi}
+        <div class="impl-med__img-item">
+            <img src="{$mi}" alt="Медицинские импланты" loading="lazy">
+        </div>
+        {/foreach}
+    </div>
         </div>
     </div>
 </section>

@@ -309,15 +309,34 @@
     color: #3d5a78;
 }
 
-.impl-med__img {
-    min-width: 0;
+.impl-med__imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
-.impl-med__img img {
+.impl-med__img-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(11, 46, 86, 0.10);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.impl-med__img-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(22, 107, 182, 0.18);
+}
+
+.impl-med__img-item img {
     display: block;
     width: 100%;
-    border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(11, 46, 86, 0.12);
+    height: 140px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.impl-med__img-item:hover img {
+    transform: scale(1.05);
 }
 
 /* ─── КЕЙСЫ ──────────────────────────────────────────── */
